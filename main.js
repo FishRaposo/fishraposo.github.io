@@ -1,0 +1,220 @@
+/* Vinícius Raposo — systems that work while you don't
+ * Main JavaScript file
+ */
+
+(function () {
+  'use strict';
+
+  // Shared HTML templates
+  var headerHTML = [
+    '<header class="header">',
+    '  <div class="header-content">',
+    '    <a href="index.html" class="brand">',
+    '      <p class="brand-name">Vinícius Raposo</p>',
+    '      <p class="brand-title">Building AI, sound money, and individual sovereignty.</p>',
+    '      <p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p>',
+    '    </a>',
+    '    <button class="btn-hamburger" aria-label="Toggle navigation" aria-expanded="false">',
+    '      <span class="hamburger-line"></span>',
+    '      <span class="hamburger-line"></span>',
+    '      <span class="hamburger-line"></span>',
+    '    </button>',
+    '    <nav class="nav">',
+    '      <a href="index.html" class="nav-link">Home</a>',
+    '      <a href="projects.html" class="nav-link">Projects</a>',
+    '      <a href="https://github.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
+    '        GitHub',
+    '        <svg class="nav-icon"><use href="icons.svg#icon-github"></use></svg>',
+    '      </a>',
+    '      <a href="https://x.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
+    '        <svg class="nav-icon"><use href="icons.svg#icon-x"></use></svg>',
+    '      </a>',
+    '    </nav>',
+    '  </div>',
+    '</header>'
+  ].join('');
+
+  var ctaHTML = [
+    '<section class="cta-section">',
+    '  <div class="cta-inner">',
+    '    <div class="cta-bg"></div>',
+    '    <div class="cta-content">',
+    '      <div class="cta-left">',
+    '        <div class="cta-icon">',
+    '          <svg><use href="icons.svg#icon-lightning"></use></svg>',
+    '        </div>',
+    '        <div>',
+    '          <h2 class="cta-title">{{title}}</h2>',
+    '          <p class="cta-subtitle">{{subtitle}}</p>',
+    '        </div>',
+    '      </div>',
+    '      <a href="{{url}}" class="btn-primary" target="_blank" rel="noopener">',
+    '        {{button}}',
+    '        <svg width="20" height="20"><use href="icons.svg#icon-external"></use></svg>',
+    '      </a>',
+    '    </div>',
+    '  </div>',
+    '</section>'
+  ].join('');
+
+  var footerHTML = [
+    '<footer class="footer">',
+    '  <div class="footer-content">',
+    '    <div>',
+    '      <p class="footer-brand-name">Vinícius Raposo</p>',
+    '      <p class="footer-brand-title">I build the systems that work while you don&rsquo;t.</p>',
+    '      <p class="footer-brand-tagline">Building AI, sound money, and individual sovereignty.</p>',
+    '    </div>',
+    '    <nav class="footer-nav">',
+    '      <a href="index.html">Home</a>',
+    '      <a href="projects.html">Projects</a>',
+    '      <a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a>',
+    '      <a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a>',
+    '    </nav>',
+    '  </div>',
+    '  <p class="footer-copyright">&copy; 2026 Vinícius Raposo. All rights reserved.</p>',
+    '</footer>'
+  ].join('');
+
+  function injectSharedBlocks() {
+    var container = document.querySelector('.container');
+    var main = document.querySelector('main');
+    if (!container || !main) return;
+
+    // Inject header before <main>
+    var headerWrap = document.createElement('div');
+    headerWrap.innerHTML = headerHTML;
+    container.insertBefore(headerWrap.firstElementChild, main);
+
+    // Init hamburger toggle
+    var hamburger = document.querySelector('.btn-hamburger');
+    var nav = document.querySelector('.nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', function () {
+        var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('nav--open');
+        hamburger.classList.toggle('btn-hamburger--active');
+      });
+
+      // Close nav on Escape, return focus to hamburger
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav--open')) {
+          nav.classList.remove('nav--open');
+          hamburger.classList.remove('btn-hamburger--active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.focus();
+        }
+      });
+
+      // Close nav when focus leaves the last nav link
+      var navLinks = nav.querySelectorAll('.nav-link');
+      if (navLinks.length > 0) {
+        var lastLink = navLinks[navLinks.length - 1];
+        lastLink.addEventListener('blur', function (e) {
+          // Small timeout to check if focus moved outside the nav
+          setTimeout(function () {
+            if (nav.classList.contains('nav--open') && !nav.contains(document.activeElement)) {
+              nav.classList.remove('nav--open');
+              hamburger.classList.remove('btn-hamburger--active');
+              hamburger.setAttribute('aria-expanded', 'false');
+            }
+          }, 50);
+        });
+      }
+    }
+
+    // Build CTA from data attributes on <main>
+    var ctaTitle = main.getAttribute('data-cta-title') || '';
+    var ctaSubtitle = main.getAttribute('data-cta-subtitle') || '';
+    var ctaButton = main.getAttribute('data-cta-button') || '';
+    var ctaUrl = main.getAttribute('data-cta-url') || 'https://github.com/FishRaposo';
+
+    var ctaWrap = document.createElement('div');
+    ctaWrap.innerHTML = ctaHTML
+      .replace('{{title}}', ctaTitle)
+      .replace('{{subtitle}}', ctaSubtitle)
+      .replace('{{button}}', ctaButton)
+      .replace('{{url}}', ctaUrl);
+    container.insertBefore(ctaWrap.firstElementChild, null);
+
+    // Inject footer at end
+    var footerWrap = document.createElement('div');
+    footerWrap.innerHTML = footerHTML;
+    container.appendChild(footerWrap.firstElementChild);
+  }
+
+  function setActiveNav() {
+    var path = window.location.pathname;
+    var page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    var links = document.querySelectorAll('.nav-link');
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      var href = link.getAttribute('href');
+      if (href === page || (page === '' && href === 'index.html')) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    }
+  }
+
+  // Tag filter for projects.html
+  function initTagFilter() {
+    var filterBar = document.getElementById('filter-bar');
+    var grid = document.getElementById('projects-grid');
+    if (!filterBar || !grid) return;
+
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+
+      var filter = btn.dataset.filter;
+
+      var buttons = filterBar.querySelectorAll('.filter-btn');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+      }
+      btn.classList.add('active');
+
+      var cards = grid.querySelectorAll('.project-card');
+      var visible = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var tags = (card.dataset.tags || '').split(' ');
+        var match = filter === 'all' || tags.indexOf(filter) !== -1;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      }
+
+      // Show/hide filter counter
+      var counterEl = document.querySelector('.filter-counter');
+      if (!counterEl) {
+        counterEl = document.createElement('p');
+        counterEl.className = 'filter-counter';
+        filterBar.parentNode.insertBefore(counterEl, grid);
+      }
+      counterEl.textContent = 'Showing ' + visible + ' of ' + cards.length + ' projects';
+      counterEl.className = 'filter-counter filter-counter--visible';
+
+      // Toggle empty state
+      var emptyState = grid.querySelector('.projects-empty');
+      if (visible === 0) {
+        if (!emptyState) {
+          emptyState = document.createElement('div');
+          emptyState.className = 'projects-empty';
+          emptyState.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p class="projects-empty-title">No projects match this filter</p><p class="projects-empty-sub">Try a different tag or view all projects.</p>';
+          grid.appendChild(emptyState);
+        }
+        emptyState.style.display = '';
+      } else if (emptyState) {
+        emptyState.style.display = 'none';
+      }
+    });
+  }
+
+  // Initialize
+  injectSharedBlocks();
+  setActiveNav();
+  initTagFilter();
+})();
