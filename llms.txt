@@ -3,8 +3,8 @@
 ## Canon
 
 - **Public lead:** I build the systems that work while you don't.
-- **Thesis:** Building AI, sound money, and individual sovereignty.
-- **North Star:** Twenty years of the same idea, expressed four different ways.
+- **Thesis:** On AI, sound money, and owning your own life.
+- **North Star:** Twenty years of the same idea, across three domains.
 - **Hook:** This isn't cost arbitrage. It's engineering arbitrage.
 - **Portfolio framing:** Big 6 WIP direction + complete public repo catalog.
 - **Public repo count:** 24 public repositories as of 2026-06-16.

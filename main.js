@@ -81,6 +81,10 @@
     var main = document.querySelector('main');
     if (!container || !main) return;
 
+    // Remove any hardcoded header so the injected one (with hamburger) takes over
+    var existingHeader = document.querySelector('.header');
+    if (existingHeader) existingHeader.remove();
+
     // Inject header before <main>
     var headerWrap = document.createElement('div');
     headerWrap.innerHTML = headerHTML;
@@ -165,39 +169,45 @@
     var grid = document.getElementById('projects-grid');
     if (!filterBar || !grid) return;
 
-    filterBar.addEventListener('click', function (e) {
-      var btn = e.target.closest('.filter-btn');
-      if (!btn) return;
+    var cards = grid.querySelectorAll('.project-card');
+    var totalCards = cards.length;
 
-      var filter = btn.dataset.filter;
+    // Initialize counter on load
+    var counterEl = document.createElement('p');
+    counterEl.className = 'filter-counter filter-counter--visible';
+    counterEl.textContent = 'Showing ' + totalCards + ' of ' + totalCards + ' projects';
+    filterBar.parentNode.insertBefore(counterEl, grid);
 
-      var buttons = filterBar.querySelectorAll('.filter-btn');
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove('active');
-      }
-      btn.classList.add('active');
-
-      var cards = grid.querySelectorAll('.project-card');
+    function applyFilter(filter) {
       var visible = 0;
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i];
         var tags = (card.dataset.tags || '').split(' ');
         var match = filter === 'all' || tags.indexOf(filter) !== -1;
-        card.style.display = match ? '' : 'none';
-        if (match) visible++;
+        if (match) {
+          card.classList.remove('card-hiding');
+          card.style.display = '';
+          card.style.opacity = '';
+          visible++;
+        } else {
+          card.classList.add('card-hiding');
+          // Safety: ensure display:none even if transitionend never fires
+          clearTimeout(card._hideTimer);
+          card._hideTimer = setTimeout(function(c) {
+            if (c.classList.contains('card-hiding')) {
+              c.style.display = 'none';
+            }
+          }, 200, card);
+        }
       }
 
-      // Show/hide filter counter
-      var counterEl = document.querySelector('.filter-counter');
-      if (!counterEl) {
-        counterEl = document.createElement('p');
-        counterEl.className = 'filter-counter';
-        filterBar.parentNode.insertBefore(counterEl, grid);
+      counterEl.textContent = 'Showing ' + visible + ' of ' + totalCards + ' projects';
+      if (filter === 'all') {
+        counterEl.classList.remove('filter-counter--visible');
+      } else {
+        counterEl.classList.add('filter-counter--visible');
       }
-      counterEl.textContent = 'Showing ' + visible + ' of ' + cards.length + ' projects';
-      counterEl.className = 'filter-counter filter-counter--visible';
 
-      // Toggle empty state
       var emptyState = grid.querySelector('.projects-empty');
       if (visible === 0) {
         if (!emptyState) {
@@ -210,6 +220,21 @@
       } else if (emptyState) {
         emptyState.style.display = 'none';
       }
+    }
+
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+
+      var filter = btn.dataset.filter;
+
+      var buttons = filterBar.querySelectorAll('.filter-btn');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+      }
+      btn.classList.add('active');
+
+      applyFilter(filter);
     });
   }
 
@@ -217,4 +242,42 @@
   injectSharedBlocks();
   setActiveNav();
   initTagFilter();
+  initScrollReveal();
+
+  // Scroll-reveal for sections below the hero
+  function initScrollReveal() {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    var targets = document.querySelectorAll('.section, .cta-section, .footer');
+    targets.forEach(function (el) {
+      observer.observe(el);
+    });
+
+    // Card-level stagger
+    var cardObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            entry.target.classList.add('reveal-up');
+          }, i * 60);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    var cards = document.querySelectorAll('.project-card, .product-card');
+    cards.forEach(function (el) {
+      cardObserver.observe(el);
+    });
+  }
 })();
