@@ -6,6 +6,20 @@
 
 The live portfolio at fishraposo.github.io. Projects are shown **build in public** with an honest status (**Shipped / Building / Designed**) — a Designed project appears with its status and a link to its plan, never dressed up as finished. Every live public GitHub repo should be listed on `projects.html` and have a static `projects/<repo>.html` page.
 
+## Positioning & Hierarchy
+
+This site is the "polished proof" layer of the public-surface chain:
+
+```
+business-portfolio (private north star — wins on conflict) → career/ (identity & voice canon) → fishraposo.github.io (polished proof) → FishRaposo/README (public face)
+```
+
+Positioning target: the **personal expert brand** — AI reliability, systems engineering, and serious AI-assisted development. Identity constants: operator statement "I build the systems that work while you don't", thesis "On AI, sound money, and owning your own life", Build · Store · Govern, and the Expat Money anchor as shipped, cited proof.
+
+The surface spec lives in the workspace's private business-portfolio repo — read it there before any site rebuild, and never copy private strategy details into this public repo.
+
+**Pending build step:** rebuilding the site's content to the personal-expert-brand positioning is a separate open task. The formerly planned "Big 6" showcase repos are retired and will not be built — the site still carries "Big 6" references (`index.html`, `projects.html`, `llms.txt`, `projects/fishraposo.html`, `styles.css`) that the rebuild must remove; do not add new links or claims that those repos are coming.
+
 ## Commands
 
 ```bash
