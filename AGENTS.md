@@ -14,7 +14,7 @@ Positioning target: the **personal expert brand** — AI reliability, systems en
 
 The old surface spec (`archive/career/Showcase/site-spec.md`) is superseded — rebuilds are specified from `career-strategy/01-job-hunt-and-cv.md`, `career-strategy/06-github-audit.md`, and `IDENTITY.md`. Never copy private strategy details into this public repo.
 
-**Pending build step:** rebuilding the site's content to the personal-expert-brand positioning is a separate open task. The formerly planned "Big 6" showcase repos are retired and will not be built — the site still carries "Big 6" references (`index.html`, `projects.html`, `llms.txt`, `projects/fishraposo.html`, `styles.css`) that the rebuild must remove; do not add new links or claims that those repos are coming.
+**Status (2026-08-11):** the rebuild landed — Big 6 sections removed everywhere, brand lines swept to the applied-AI-reliability positioning across all 25 project pages, mini-agent added (catalog card + `projects/mini-agent.html`), hermes-agent marked a fork, `llms.txt` canon rewritten. Remnant: dead `.big6-table` styles in `styles.css` (harmless, unused). The formerly planned "Big 6" showcase repos are retired and will not be built — never add links or claims that they are coming. Visual QA of the rendered site is the owner's handoff.
 
 ## Commands
 
