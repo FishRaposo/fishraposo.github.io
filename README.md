@@ -1,8 +1,7 @@
 # Vinícius Raposo — I build the systems that work while you don't
 
 > I build the systems that work while you don't.
-> On AI, sound money, and owning your own life.
-> **Twenty years of the same idea, across three domains.**
+> Applied AI reliability — production RAG, agents, evaluation, deterministic scaffolding.
 > This isn't cost arbitrage. It's engineering arbitrage.
 
 Personal portfolio site hosted on GitHub Pages. Static HTML/CSS/JS — no build step, no framework, no dependencies.
