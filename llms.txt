@@ -44,20 +44,19 @@
 - **github-issue-pr-agent** — Highlighted — https://fishraposo.github.io/projects/github-issue-pr-agent.html — https://github.com/FishRaposo/github-issue-pr-agent
 - **groundtruth** — Highlighted — https://fishraposo.github.io/projects/groundtruth.html — https://github.com/FishRaposo/groundtruth
 - **helppeer-collaboration** — Standalone Skill/protocol ecosystem proof — https://github.com/FishRaposo/helppeer-collaboration
-- **hermes-agent** — Archived reference; attributed fork of NousResearch/hermes-agent, not ARIA source — https://fishraposo.github.io/projects/hermes-agent.html — https://github.com/FishRaposo/hermes-agent
 - **kiwi-code** — Archived reference; attributed Roo Code lineage — https://github.com/FishRaposo/kiwi-code
 - **knowledgeops** — Consolidated into GroundTruth; archived on GitHub — https://fishraposo.github.io/projects/knowledgeops.html — https://github.com/FishRaposo/knowledgeops
 - **llm-cost-latency-monitor** — Consolidated into AgentTrace; archived on GitHub — https://fishraposo.github.io/projects/llm-cost-latency-monitor.html — https://github.com/FishRaposo/llm-cost-latency-monitor
 - **llm-gateway** — Highlighted — https://fishraposo.github.io/projects/llm-gateway.html — https://github.com/FishRaposo/llm-gateway
-- **material-progression** — Active game/mod proof — https://github.com/FishRaposo/material-progression
+- **material-progression** — Archived craft proof; parked pending final content pass — https://github.com/FishRaposo/material-progression
 - **mini-agent** — Consolidated into ARIA; archived on GitHub — https://fishraposo.github.io/projects/mini-agent.html — https://github.com/FishRaposo/mini-agent
-- **operator-shared-core** — Supporting system — https://fishraposo.github.io/projects/operator-shared-core.html — https://github.com/FishRaposo/operator-shared-core
+- **operator-shared-core** — Archived reference; foundation library of the retired operator-systems family — https://fishraposo.github.io/projects/operator-shared-core.html — https://github.com/FishRaposo/operator-shared-core
 - **operator-systems-template** — Consolidated into operator-shared-core; archived on GitHub — https://fishraposo.github.io/projects/operator-systems-template.html — https://github.com/FishRaposo/operator-systems-template
 - **palindrome-checker** — Archived reference; archived on GitHub — https://fishraposo.github.io/projects/palindrome-checker.html — https://github.com/FishRaposo/palindrome-checker
 - **personal-knowledge-base-os** — Highlighted — https://fishraposo.github.io/projects/personal-knowledge-base-os.html — https://github.com/FishRaposo/personal-knowledge-base-os
 - **rag-evaluation-lab** — Consolidated into EvalForge; archived on GitHub — https://fishraposo.github.io/projects/rag-evaluation-lab.html — https://github.com/FishRaposo/rag-evaluation-lab
-- **real-time-analytics-stack** — Supporting system — https://fishraposo.github.io/projects/real-time-analytics-stack.html — https://github.com/FishRaposo/real-time-analytics-stack
-- **ruler-and-vibes** — Active dirty game project; snapshot preserved and untouched — https://github.com/FishRaposo/ruler-and-vibes
+- **real-time-analytics-stack** — Archived reference; off-direction backend stack — https://fishraposo.github.io/projects/real-time-analytics-stack.html — https://github.com/FishRaposo/real-time-analytics-stack
+- **ruler-and-vibes** — Personal model-evaluation kit: 759 test forms across 40 categories — https://github.com/FishRaposo/ruler-and-vibes
 - **super-study** — Archived reference; archived on GitHub — https://fishraposo.github.io/projects/super-study.html — https://github.com/FishRaposo/super-study
 - **WCP-Compliance-Agent-V2** — Archived reference; archived on GitHub — https://fishraposo.github.io/projects/wcp-compliance-agent-v2.html — https://github.com/FishRaposo/WCP-Compliance-Agent-V2
 - **WCP-Compliance-Agent-V3** — Archived reference; archived on GitHub — https://fishraposo.github.io/projects/wcp-compliance-agent-v3.html — https://github.com/FishRaposo/WCP-Compliance-Agent-V3

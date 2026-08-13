@@ -14,7 +14,7 @@ Positioning target: the **personal expert brand** — AI reliability, systems en
 
 The old surface spec (`archive/career/Showcase/site-spec.md`) is superseded — rebuilds are specified from `career-strategy/01-job-hunt-and-cv.md`, `career-strategy/06-github-audit.md`, and `IDENTITY.md`. Never copy private strategy details into this public repo.
 
-**Status (2026-08-12):** the clean-ARIA consolidation pass leads with canonical domains. Absorbed source pages remain in the catalog and say “consolidated into …”; archived references are labeled pending approval, never already archived without live GitHub evidence. The separately attributed hermes-agent fork is not ARIA source. Remnant: dead `.big6-table` styles in `styles.css` (harmless, unused). The formerly planned "Big 6" showcase repos are retired and will not be built. Visual QA of the rendered site is the owner's handoff.
+**Status (2026-08-12):** the clean-ARIA consolidation pass leads with canonical domains. Absorbed source pages remain in the catalog and say “consolidated into …”; archived references are labeled pending approval, never already archived without live GitHub evidence. The former hermes-agent catalog entry was removed 2026-08-13 (repo renamed away; aria-agent is the canonical harness). Remnant: dead `.big6-table` styles in `styles.css` (harmless, unused). The formerly planned "Big 6" showcase repos are retired and will not be built. Visual QA of the rendered site is the owner's handoff.
 
 Durable local reference records for the 13 archived references live outside this public site at `../portfolio-inventory/references/<repository-name>.md`; project pages keep their public GitHub provenance links and describe the records rather than exposing local filesystem paths.
 
