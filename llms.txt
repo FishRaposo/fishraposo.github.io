@@ -48,7 +48,7 @@
 - **knowledgeops** — Consolidated into GroundTruth; archived on GitHub — https://fishraposo.github.io/projects/knowledgeops.html — https://github.com/FishRaposo/knowledgeops
 - **llm-cost-latency-monitor** — Consolidated into AgentTrace; archived on GitHub — https://fishraposo.github.io/projects/llm-cost-latency-monitor.html — https://github.com/FishRaposo/llm-cost-latency-monitor
 - **llm-gateway** — Highlighted — https://fishraposo.github.io/projects/llm-gateway.html — https://github.com/FishRaposo/llm-gateway
-- **material-progression** — Archived craft proof; parked pending final content pass — https://github.com/FishRaposo/material-progression
+- **material-progression** — Active game/mod proof — https://github.com/FishRaposo/material-progression
 - **mini-agent** — Consolidated into ARIA; archived on GitHub — https://fishraposo.github.io/projects/mini-agent.html — https://github.com/FishRaposo/mini-agent
 - **operator-shared-core** — Archived reference; foundation library of the retired operator-systems family — https://fishraposo.github.io/projects/operator-shared-core.html — https://github.com/FishRaposo/operator-shared-core
 - **operator-systems-template** — Consolidated into operator-shared-core; archived on GitHub — https://fishraposo.github.io/projects/operator-systems-template.html — https://github.com/FishRaposo/operator-systems-template
