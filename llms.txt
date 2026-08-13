@@ -22,7 +22,7 @@
 - **groundtruth** — Grounded document QA / RAG proof with citations and approval workflows. — https://github.com/FishRaposo/groundtruth
 - **llm-gateway** — LLM proxy with routing, guardrails, cost control, and fallback. — https://github.com/FishRaposo/llm-gateway
 - **agenttrace** — Agent observability and replay SDK with cost attribution. — https://github.com/FishRaposo/agenttrace
-- **evalforge** — Regression testing framework for RAG and agentic AI. — https://github.com/FishRaposo/evalforge
+- **evalforge** — Regression testing for RAG and agentic AI: retrieval and conversational evaluations. — https://github.com/FishRaposo/evalforge
 - **github-issue-pr-agent** — Autonomous issue-to-PR workflow with a safety boundary. — https://github.com/FishRaposo/github-issue-pr-agent
 - **personal-knowledge-base-os** — Local knowledge-base API with backlinks and citation-grounded chat. — https://github.com/FishRaposo/personal-knowledge-base-os
 
@@ -37,7 +37,7 @@
 - **aria-agent** — Shipped proof — https://fishraposo.github.io/projects/aria-agent.html — https://github.com/FishRaposo/aria-agent
 - **async-workflow-engine** — Supporting system — https://fishraposo.github.io/projects/async-workflow-engine.html — https://github.com/FishRaposo/async-workflow-engine
 - **document-intelligence-pipeline** — Consolidated into GroundTruth; archived on GitHub — https://fishraposo.github.io/projects/document-intelligence-pipeline.html — https://github.com/FishRaposo/document-intelligence-pipeline
-- **evalforge** — Highlighted — https://fishraposo.github.io/projects/evalforge.html — https://github.com/FishRaposo/evalforge
+- **evalforge** — Shipped proof — https://fishraposo.github.io/projects/evalforge.html — https://github.com/FishRaposo/evalforge
 - **FishRaposo** — Meta — https://fishraposo.github.io/projects/fishraposo.html — https://github.com/FishRaposo/FishRaposo
 - **fishraposo.github.io** — Portfolio — https://fishraposo.github.io/ — https://github.com/FishRaposo/fishraposo.github.io
 - **game-systems-sandbox** — Supporting system — https://fishraposo.github.io/projects/game-systems-sandbox.html — https://github.com/FishRaposo/game-systems-sandbox
