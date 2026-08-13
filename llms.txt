@@ -28,7 +28,7 @@
 
 ## Writing
 
-- **Taste Is All You Need** — long-form analysis of agent-harness economics: model intelligence is commoditizing; the scarce complement is engineering judgment encoded into the environment around the model. Part 2 (byte-validated benchmark receipts) in assembly as of 2026-08-11.
+- **Taste Is All You Need** — long-form analysis of agent-harness economics: model intelligence is commoditizing; the scarce complement is engineering judgment encoded into the environment around the model.
 
 ## Complete public repo catalog
 
