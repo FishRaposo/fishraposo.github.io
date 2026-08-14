@@ -43,7 +43,7 @@
 - **game-systems-sandbox** — Supporting system — https://fishraposo.github.io/projects/game-systems-sandbox.html — https://github.com/FishRaposo/game-systems-sandbox
 - **github-issue-pr-agent** — Highlighted — https://fishraposo.github.io/projects/github-issue-pr-agent.html — https://github.com/FishRaposo/github-issue-pr-agent
 - **groundtruth** — Highlighted — https://fishraposo.github.io/projects/groundtruth.html — https://github.com/FishRaposo/groundtruth
-- **helppeer-collaboration** — Standalone Skill/protocol ecosystem proof — https://github.com/FishRaposo/helppeer-collaboration
+- **helppeer-collaboration** — Standalone Skill/protocol ecosystem proof — https://fishraposo.github.io/projects/helppeer-collaboration.html — https://github.com/FishRaposo/helppeer-collaboration
 - **kiwi-code** — Archived reference; attributed Roo Code lineage — https://github.com/FishRaposo/kiwi-code
 - **knowledgeops** — Consolidated into GroundTruth; archived on GitHub — https://fishraposo.github.io/projects/knowledgeops.html — https://github.com/FishRaposo/knowledgeops
 - **llm-cost-latency-monitor** — Consolidated into AgentTrace; archived on GitHub — https://fishraposo.github.io/projects/llm-cost-latency-monitor.html — https://github.com/FishRaposo/llm-cost-latency-monitor
