@@ -18,7 +18,7 @@
 ## Highlighted existing repos
 
 - **WCP-Compliance-Agent-V5** — Production-ready WH-347 compliance platform: deterministic validation decides, the LLM explains, every decision is traceable; 260 source-collected unit tests, 24 integration tests, and 92 golden-set examples. — https://github.com/FishRaposo/WCP-Compliance-Agent-V5
-- **aria-agent** — Canonical clean-break agent harness: approval gates, tracing, and progressive-disclosure Agent Skills support. — https://github.com/FishRaposo/aria-agent
+- **aria-agent** — Canonical clean-break agent harness: approval gates, execution tracing, and progressive-disclosure Agent Skills. Offline-first with bounded execution, safety checks, replay, local memory, SSE, and checksummed evidence; hosted workflows remain deferred. — https://github.com/FishRaposo/aria-agent
 - **groundtruth** — Grounded document QA / RAG proof with citations and approval workflows. — https://github.com/FishRaposo/groundtruth
 - **llm-gateway** — LLM proxy with routing, guardrails, cost control, and fallback. — https://github.com/FishRaposo/llm-gateway
 - **agenttrace** — Agent observability and replay SDK with cost attribution and prompt-cost reporting. Offline-first by default; hosted/team workflows remain deferred. — https://github.com/FishRaposo/agenttrace
