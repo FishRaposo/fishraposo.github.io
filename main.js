@@ -5,11 +5,15 @@
 (function () {
   'use strict';
 
+  // Detail pages live one level deep (projects/<repo>.html); prefix root links
+  // and icon sprite references accordingly so they resolve from any depth.
+  var rootPrefix = /\/projects\/[^/]+$/.test(window.location.pathname) ? '../' : '';
+
   // Shared HTML templates
   var headerHTML = [
     '<header class="header">',
     '  <div class="header-content">',
-    '    <a href="index.html" class="brand">',
+    '    <a href="' + rootPrefix + 'index.html" class="brand">',
     '      <p class="brand-name">Vinícius Raposo</p>',
     '      <p class="brand-title">AI reliability, systems engineering, and serious AI-assisted development.</p>',
     '      <p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p>',
@@ -20,14 +24,14 @@
     '      <span class="hamburger-line"></span>',
     '    </button>',
     '    <nav class="nav">',
-    '      <a href="index.html" class="nav-link">Home</a>',
-    '      <a href="projects.html" class="nav-link">Projects</a>',
+    '      <a href="' + rootPrefix + 'index.html" class="nav-link">Home</a>',
+    '      <a href="' + rootPrefix + 'projects.html" class="nav-link">Projects</a>',
     '      <a href="https://github.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
     '        GitHub',
-    '        <svg class="nav-icon"><use href="icons.svg#icon-github"></use></svg>',
+    '        <svg class="nav-icon"><use href="' + rootPrefix + 'icons.svg#icon-github"></use></svg>',
     '      </a>',
     '      <a href="https://x.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
-    '        <svg class="nav-icon"><use href="icons.svg#icon-x"></use></svg>',
+    '        <svg class="nav-icon"><use href="' + rootPrefix + 'icons.svg#icon-x"></use></svg>',
     '      </a>',
     '    </nav>',
     '  </div>',
@@ -41,7 +45,7 @@
     '    <div class="cta-content">',
     '      <div class="cta-left">',
     '        <div class="cta-icon">',
-    '          <svg><use href="icons.svg#icon-lightning"></use></svg>',
+    '          <svg><use href="' + rootPrefix + 'icons.svg#icon-lightning"></use></svg>',
     '        </div>',
     '        <div>',
     '          <h2 class="cta-title">{{title}}</h2>',
@@ -50,7 +54,7 @@
     '      </div>',
     '      <a href="{{url}}" class="btn-primary" target="_blank" rel="noopener">',
     '        {{button}}',
-    '        <svg width="20" height="20"><use href="icons.svg#icon-external"></use></svg>',
+    '        <svg width="20" height="20"><use href="' + rootPrefix + 'icons.svg#icon-external"></use></svg>',
     '      </a>',
     '    </div>',
     '  </div>',
@@ -66,8 +70,8 @@
     '      <p class="footer-brand-tagline">AI reliability, systems engineering, and serious AI-assisted development.</p>',
     '    </div>',
     '    <nav class="footer-nav">',
-    '      <a href="index.html">Home</a>',
-    '      <a href="projects.html">Projects</a>',
+    '      <a href="' + rootPrefix + 'index.html">Home</a>',
+    '      <a href="' + rootPrefix + 'projects.html">Projects</a>',
     '      <a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a>',
     '      <a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a>',
     '    </nav>',
