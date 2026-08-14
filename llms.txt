@@ -21,7 +21,7 @@
 - **aria-agent** — Canonical clean-break agent harness: approval gates, tracing, and progressive-disclosure Agent Skills support. — https://github.com/FishRaposo/aria-agent
 - **groundtruth** — Grounded document QA / RAG proof with citations and approval workflows. — https://github.com/FishRaposo/groundtruth
 - **llm-gateway** — LLM proxy with routing, guardrails, cost control, and fallback. — https://github.com/FishRaposo/llm-gateway
-- **agenttrace** — Agent observability and replay SDK with cost attribution. — https://github.com/FishRaposo/agenttrace
+- **agenttrace** — Agent observability and replay SDK with cost attribution and prompt-cost reporting. Offline-first by default; hosted/team workflows remain deferred. — https://github.com/FishRaposo/agenttrace
 - **evalforge** — Regression testing for RAG and agentic AI: retrieval and conversational evaluations. — https://github.com/FishRaposo/evalforge
 - **github-issue-pr-agent** — Autonomous issue-to-PR workflow with a safety boundary. — https://github.com/FishRaposo/github-issue-pr-agent
 - **personal-knowledge-base-os** — Local knowledge-base API with backlinks and citation-grounded chat. — https://github.com/FishRaposo/personal-knowledge-base-os
