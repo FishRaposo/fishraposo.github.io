@@ -35,7 +35,7 @@
 - **agenttrace** — Highlighted — https://fishraposo.github.io/projects/agenttrace.html — https://github.com/FishRaposo/agenttrace
 - **ai-support-simulator** — Consolidated into EvalForge; archived on GitHub — https://fishraposo.github.io/projects/ai-support-simulator.html — https://github.com/FishRaposo/ai-support-simulator
 - **aria-agent** — Shipped proof — https://fishraposo.github.io/projects/aria-agent.html — https://github.com/FishRaposo/aria-agent
-- **async-workflow-engine** — Supporting system — https://fishraposo.github.io/projects/async-workflow-engine.html — https://github.com/FishRaposo/async-workflow-engine
+- **async-workflow-engine** — Supporting system: DAG-based async workflow orchestrator with Celery, dependency resolution, retry logic, and a YAML workflow DSL. Offline proof: 193 Python tests, 25 Vitest tests, and 6 Chromium smoke checks; PostgreSQL, Redis, Celery, and hosted LLMs remain optional, with no live deployment implied. — https://fishraposo.github.io/projects/async-workflow-engine.html — https://github.com/FishRaposo/async-workflow-engine
 - **document-intelligence-pipeline** — Consolidated into GroundTruth; archived on GitHub — https://fishraposo.github.io/projects/document-intelligence-pipeline.html — https://github.com/FishRaposo/document-intelligence-pipeline
 - **evalforge** — Shipped proof — https://fishraposo.github.io/projects/evalforge.html — https://github.com/FishRaposo/evalforge
 - **FishRaposo** — Meta — https://fishraposo.github.io/projects/fishraposo.html — https://github.com/FishRaposo/FishRaposo
