@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>game-systems-sandbox — Vinícius Raposo</title>
-  <meta name="description" content="game-systems-sandbox: TypeScript + Python hybrid RPG simulator: combat rounds, weighted loot drops, XP curves, and Monte Carlo battle analysis">
+  <meta name="description" content="Monte Carlo battle/balance analysis as a developer utility — balance your RPG combat with simulation.">
   <meta name="author" content="Vinícius Raposo">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +20,13 @@
     <header class="header"><div class="header-content"><a href="../index.html" class="brand"><p class="brand-name">Vinícius Raposo</p><p class="brand-title">AI reliability, systems engineering, and serious AI-assisted development.</p><p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p></a><nav class="nav"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="https://github.com/FishRaposo/game-systems-sandbox" class="nav-link" target="_blank" rel="noopener">GitHub</a></nav></div></header>
     <main id="main-content" data-cta-title="View the source" data-cta-subtitle="This page summarizes the public GitHub repository. The repo remains the source of truth for code, tests, and implementation details." data-cta-button="Open on GitHub" data-cta-url="https://github.com/FishRaposo/game-systems-sandbox">
       <section class="page-hero">
-        <div class="badge">Supporting system · TypeScript</div>
+        <div class="badge">Supporting system · TypeScript + Python</div>
         <h1 class="page-title"><span class="gradient-text">game-systems-sandbox</span></h1>
-        <p class="page-subtitle">RPG systems simulator for combat, loot, XP, and Monte Carlo balancing.</p>
-        <p class="page-description">TypeScript + Python hybrid RPG simulator: combat rounds, weighted loot drops, XP curves, and Monte Carlo battle analysis</p>
+        <p class="page-subtitle">Monte Carlo battle/balance analysis as a developer utility — balance your RPG combat with simulation.</p>
+        <p class="page-description">A hybrid developer tool: deterministic TypeScript simulators, a Python/FastAPI bridge and compatibility layer, a shipped Next.js dashboard, and canonical offline evidence.</p>
         <div class="hero-bins" style="justify-content: center;">
-          <span class="bin-tag">Language: TypeScript</span>
-          <span class="bin-tag">Updated: 2026-06-16</span>
+          <span class="bin-tag">Language: TypeScript + Python</span>
+          <span class="bin-tag">Updated: 2026-08-16</span>
           <span class="bin-tag">Visibility: public</span>
         </div>
         <div class="hero-actions" style="justify-content: center;">
@@ -36,7 +36,11 @@
       </section>
       <section class="section section--tight">
         <div class="products-grid products-grid-code">
-          <div class="product-card product-card--featured"><h2 class="product-title">Why it matters</h2><p class="product-description">RPG systems simulator for combat, loot, XP, and Monte Carlo balancing.</p></div>
+          <div class="product-card product-card--featured"><h2 class="product-title">Why it matters</h2><p class="product-description">Seeded combat, loot, XP, economy, and A/B balance simulations make design changes measurable and reproducible. The dashboard runs against the API or deterministic browser-local demo data.</p></div>
+          <div class="product-card"><h2 class="product-title">Verified evidence</h2><p class="product-description">13 focused scanner tests; 118 Python tests with 9 real-TSX integration skips; 24 evidence tests; 56 root Vitest tests; 36 dashboard Vitest tests. Canonical evidence hash: <code>6f9a43251b336bd861b7b64246dd3bdfa11f56e7ddf34cdfd28aad2135b14dbe</code>.</p></div>
+          <div class="product-card"><h2 class="product-title">Offline by default</h2><p class="product-description">Local SQLite, eager in-memory tasks, disabled telemetry, and dashboard demo data require no credentials or external service. PostgreSQL, Redis workers, and the best-effort HTTP telemetry adapter are optional. Docker, the post-port Chromium final status, and a later full aggregate are not claimed green locally.</p></div>
+          <div class="product-card"><h2 class="product-title">Deferred shelf scope</h2><p class="product-description">Parallel worker-thread/WASM execution, multi-fighter and status-effect combat, an agent economy, hosted experiments, auth, mandatory infrastructure, and storefront work remain deliberate future product boundaries.</p></div>
+          <div class="product-card"><h2 class="product-title">Absorbed lineage</h2><p class="product-description">The package-private compatibility runtime preserves the exact MIT-licensed server closure absorbed from archived operator-shared-core v1.3.0 at source commit <code>dbf276a7708da65b55e1f10b35af634b300d1f07</code>; simulator math and public response contracts remain local.</p></div>
           <div class="product-card"><h2 class="product-title">Repo facts</h2><p class="product-description">Default branch: main. Stars: 0. Forks: 0. Created: 2026-06-09.</p></div>
         </div>
       </section>
