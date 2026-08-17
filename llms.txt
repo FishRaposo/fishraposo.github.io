@@ -23,7 +23,7 @@
 - **llm-gateway** — LLM proxy with routing, guardrails, cost control, and fallback. — https://github.com/FishRaposo/llm-gateway
 - **agenttrace** — Agent observability and replay SDK with cost attribution and prompt-cost reporting. Its dependency-free SDK includes the absorbed safety-bounded issue-to-draft-PR workflow with deterministic planning, sandbox guards, bounded tests, explicit approval, draft-only offline intent, ordered audit events, and replay. Verified locally: 132 SDK tests, 98 collector tests, 24 dashboard tests, isolated wheel checks, and checksum-verified evidence. Real GitHub/LLM providers, server routes for this workflow, hosted teams, and external infrastructure remain optional or deferred. — https://github.com/FishRaposo/agenttrace
 - **evalforge** — Regression testing for RAG and agentic AI: retrieval and conversational evaluations. — https://github.com/FishRaposo/evalforge
-- **personal-knowledge-base-os** — Local knowledge-base API with backlinks and citation-grounded chat. — https://github.com/FishRaposo/personal-knowledge-base-os
+- **personal-knowledge-base-os** — Local knowledge-base API with backlinks and citation-grounded chat. Supporting system implemented in Python + TypeScript: offline-first wikilinks/backlinks graph with dangling-link metadata, safe editing, hybrid/tag-scoped retrieval, citation-grounded chat, multi-vault isolation, incremental indexing, saved searches, live SSE events, and deterministic flashcards. Verified: 160 Python tests, 47 frontend Vitest tests, and 27 evidence tests. Offline defaults require no credentials or hosted infrastructure; PostgreSQL, Redis, Celery, OpenAI, Anthropic, watchdog, OCR, and heavy parser/model integrations remain optional. Manual visual/positioning QA is an owner handoff. — https://github.com/FishRaposo/personal-knowledge-base-os
 
 ## Writing
 
@@ -52,7 +52,7 @@
 - **operator-shared-core** — Archived reference; foundation library of the retired operator-systems family — https://fishraposo.github.io/projects/operator-shared-core.html — https://github.com/FishRaposo/operator-shared-core
 - **operator-systems-template** — Consolidated into operator-shared-core; archived on GitHub — https://fishraposo.github.io/projects/operator-systems-template.html — https://github.com/FishRaposo/operator-systems-template
 - **palindrome-checker** — Archived reference; archived on GitHub — https://fishraposo.github.io/projects/palindrome-checker.html — https://github.com/FishRaposo/palindrome-checker
-- **personal-knowledge-base-os** — Highlighted — https://fishraposo.github.io/projects/personal-knowledge-base-os.html — https://github.com/FishRaposo/personal-knowledge-base-os
+- **personal-knowledge-base-os** — Supporting system; Python + TypeScript; offline-first graph, retrieval, vault, watcher, SSE, and flashcard proof — https://fishraposo.github.io/projects/personal-knowledge-base-os.html — https://github.com/FishRaposo/personal-knowledge-base-os
 - **rag-evaluation-lab** — Consolidated into EvalForge; archived on GitHub — https://fishraposo.github.io/projects/rag-evaluation-lab.html — https://github.com/FishRaposo/rag-evaluation-lab
 - **real-time-analytics-stack** — Archived reference; off-direction backend stack — https://fishraposo.github.io/projects/real-time-analytics-stack.html — https://github.com/FishRaposo/real-time-analytics-stack
 - **ruler-and-vibes** — Personal model-evaluation kit: 759 test forms across 40 categories — https://github.com/FishRaposo/ruler-and-vibes
