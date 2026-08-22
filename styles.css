@@ -341,8 +341,18 @@ p, li, dd, dt {
   font-weight: 500;
   color: var(--color-text-muted);
   text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.hero-now {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  text-align: center;
   margin-bottom: 24px;
   letter-spacing: 0.01em;
+  opacity: 0.85;
 }
 
 .hero-hero-actions {
@@ -482,6 +492,7 @@ h1 {
 .hero-hero-inner { animation: hero-in 400ms var(--ease-out) both; }
 .hero-claim      { animation: hero-in 400ms var(--ease-out) 80ms both; }
 .hero-domain     { animation: hero-in 400ms var(--ease-out) 160ms both; }
+.hero-now        { animation: hero-in 400ms var(--ease-out) 200ms both; }
 .hero-hero-actions { animation: hero-in 400ms var(--ease-out) 240ms both; }
  to { opacity: 1; transform: scale(1); } }
 
