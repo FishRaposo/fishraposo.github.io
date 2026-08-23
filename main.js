@@ -23,7 +23,7 @@
     '      <span class="hamburger-line"></span>',
     '      <span class="hamburger-line"></span>',
     '    </button>',
-    '    <nav class="nav">',
+    '    <nav class="nav" aria-label="Primary">',
     '      <a href="' + rootPrefix + 'index.html" class="nav-link">Home</a>',
     '      <a href="' + rootPrefix + 'projects.html" class="nav-link">Projects</a>',
     '      <a href="https://github.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
@@ -69,9 +69,10 @@
     '      <p class="footer-brand-title">I build the systems that work while you don&rsquo;t.</p>',
     '      <p class="footer-brand-tagline">AI reliability, systems engineering, and serious AI-assisted development.</p>',
     '    </div>',
-    '    <nav class="footer-nav">',
+    '    <nav class="footer-nav" aria-label="Footer">',
     '      <a href="' + rootPrefix + 'index.html">Home</a>',
     '      <a href="' + rootPrefix + 'projects.html">Projects</a>',
+    '      <a href="https://www.upwork.com/freelancers/~01ca94c53d0d0101f3" target="_blank" rel="noopener">Upwork</a>',
     '      <a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a>',
     '      <a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a>',
     '    </nav>',
@@ -85,9 +86,11 @@
     var main = document.querySelector('main');
     if (!container || !main) return;
 
-    // Remove any hardcoded header so the injected one (with hamburger) takes over
+    // Remove any hardcoded header/footer so the injected ones take over
     var existingHeader = document.querySelector('.header');
     if (existingHeader) existingHeader.remove();
+    var existingFooter = document.querySelector('.footer');
+    if (existingFooter) existingFooter.remove();
 
     // Inject header before <main>
     var headerWrap = document.createElement('div');
@@ -161,8 +164,10 @@
       var href = link.getAttribute('href');
       if (href === page || (page === '' && href === 'index.html')) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       } else {
         link.classList.remove('active');
+        link.removeAttribute('aria-current');
       }
     }
   }
@@ -242,7 +247,17 @@
     });
   }
 
+  function injectFavicon() {
+    if (document.querySelector('link[rel="icon"]')) return;
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/svg+xml';
+    link.href = rootPrefix + 'favicon.svg';
+    document.head.appendChild(link);
+  }
+
   // Initialize
+  injectFavicon();
   injectSharedBlocks();
   setActiveNav();
   initTagFilter();
