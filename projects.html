@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Vinícius Raposo — Public Repo Catalog</title>
   <meta name="description" content="Public repo catalog for Vinícius Raposo / FishRaposo: applied AI reliability — highlighted shipped systems, supporting repos, archives, and study projects. Every public repo is listed with an individual page.">
-  <meta name="keywords" content="FishRaposo, Vinícius Raposo, public repos, production AI, RAG, agent infrastructure, AI reliability, WCP Compliance Agent, Aria Agent, AgentTrace, EvalForge">
+  <meta name="keywords" content="FishRaposo, Vinícius Raposo, public repos, production AI, RAG, agent infrastructure, AI reliability, WCP Compliance Agent, Aria Agent, AgentTrace, EvalForge, cmd-mods">
   <meta name="author" content="Vinícius Raposo">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,19 +27,20 @@
   <div class="bg-gradient"></div>
   <div class="bg-grid"></div>
   <div class="container">
-    <main id="main-content" data-cta-title="Need the short version?" data-cta-subtitle="Start with WCP V5, ARIA, GroundTruth, AgentTrace, EvalForge, and LLM Gateway. The catalog below preserves every public repository and its consolidation status." data-cta-button="View GitHub profile" data-cta-url="https://github.com/FishRaposo">
+    <main id="main-content" data-cta-title="Need the short version?" data-cta-subtitle="Start with WCP V5, ARIA, AgentTrace, EvalForge, GroundTruth, and LLM Gateway. The catalog below preserves every public repository and its consolidation status." data-cta-button="View GitHub profile" data-cta-url="https://github.com/FishRaposo">
       <section class="page-hero">
         <div class="badge">Public GitHub catalog</div>
         <h1 class="page-title"><span class="gradient-text">Public repo catalog</span></h1>
         <p class="page-subtitle">Applied AI reliability — shipped proof and every public repository.</p>
-        <p class="page-description">Public repos organized by relevance: shipped proof first, then production-AI systems, supporting infrastructure, meta repos, archives, and study projects. Everything links to source — inspect the code, the tests, the verification story.</p>
+        <p class="page-description">The six pinned repos first — the current public proof — then every other public repository: supporting systems, archives, and study projects. Everything links to source: inspect the code, the tests, the verification story.</p>
       </section>
 
 
       <section class="section section--tight">
-        <div class="section-header"><div><h2>Highlighted public repos</h2><p class="section-description">The strongest existing repos to inspect first.</p></div></div>
+        <div class="section-header"><div><h2>Pinned proof and the full public catalog</h2><p class="section-description">Start with the six pinned repos, in pin order. Supporting systems and the archive follow — nothing public is hidden.</p></div></div>
         <div class="filter-bar" id="filter-bar">
           <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pinned">Pinned</button>
           <button class="filter-btn" data-filter="shipped">Shipped proof</button>
           <button class="filter-btn" data-filter="rag">RAG</button>
           <button class="filter-btn" data-filter="agents">Agents</button>
@@ -47,12 +48,11 @@
           <button class="filter-btn" data-filter="observability">Observability</button>
           <button class="filter-btn" data-filter="automation">Automation</button>
           <button class="filter-btn" data-filter="data-pipeline">Data</button>
-          <button class="filter-btn" data-filter="meta">Meta</button>
           <button class="filter-btn" data-filter="archive">Archive</button>
           <button class="filter-btn" data-filter="study">Study</button>
         </div>
         <div class="projects-grid projects-grid-full" id="projects-grid">
-          <article class="project-card project-card-featured" data-tags="regulatory-ai compliance multi-service evaluation rag shipped">
+          <article class="project-card project-card-featured" data-tags="pinned regulatory-ai compliance multi-service evaluation rag shipped">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Shipped proof · TypeScript</span></div>
               <h2 class="project-title">WCP-Compliance-Agent-V5</h2>
@@ -66,21 +66,7 @@
               <a href="https://github.com/FishRaposo/WCP-Compliance-Agent-V5" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-          <article class="project-card" data-tags="agents agentic evaluation archive">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Consolidated into aria-agent · archived reference</span></div>
-              <h2 class="project-title">mini-agent</h2>
-              <p class="project-subtitle">Agent Skills lineage consolidated into aria-agent; archived reference.</p>
-              <p class="project-description">Progressive-disclosure discovery, eager hints, bounded context reporting, and offline verification patterns now live in ARIA.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-07-09</li>
-                <li>Language: JavaScript</li>
-              </ul>
-              <a href="projects/mini-agent.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/mini-agent" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card project-card-featured" data-tags="agents agentic api shipped">
+          <article class="project-card project-card-featured" data-tags="pinned agents agentic api shipped">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Shipped proof · Python</span></div>
               <h2 class="project-title">aria-agent</h2>
@@ -94,35 +80,7 @@
               <a href="https://github.com/FishRaposo/aria-agent" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-          <article class="project-card project-card-featured" data-tags="rag semantic-search api data-pipeline">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Shipped proof · Python</span></div>
-              <h2 class="project-title">groundtruth</h2>
-              <p class="project-subtitle">Canonical production RAG platform: hybrid search, citations, refusal logic.</p>
-              <p class="project-description">Offline-first demo with hybrid search, citations, and refusal logic. Verified proof: 291 API tests, 47 web tests, 8/8 Chromium smoke, checksum-verified offline evidence. PostgreSQL/pgvector, Redis, model-provider, and document-parser infrastructure are optional integration paths, not a hosted production deployment. Absorbs document-intelligence-pipeline ingestion and KnowledgeOps retrieval/deployment lineage.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-08-15</li>
-                <li>Language: Python</li>
-              </ul>
-              <a href="projects/groundtruth.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/groundtruth" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card project-card-featured" data-tags="llm gateway api cost-control">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Highlighted · TypeScript</span></div>
-              <h2 class="project-title">llm-gateway</h2>
-              <p class="project-subtitle">LLM proxy with routing, guardrails, cost control, and fallback.</p>
-              <p class="project-description">Routes requests across OpenAI, Anthropic, Gemini, and Ollama behind an OpenAI-compatible API, with automatic failover, response caching, and per-API-key budget enforcement.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-06-16</li>
-                <li>Language: TypeScript</li>
-              </ul>
-              <a href="projects/llm-gateway.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/llm-gateway" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card project-card-featured" data-tags="observability agents llm cost-control">
+          <article class="project-card project-card-featured" data-tags="pinned observability agents llm cost-control">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Highlighted · Python</span></div>
               <h2 class="project-title">agenttrace</h2>
@@ -136,7 +94,7 @@
               <a href="https://github.com/FishRaposo/agenttrace" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-          <article class="project-card project-card-featured" data-tags="evaluation rag agentic ci shipped">
+          <article class="project-card project-card-featured" data-tags="pinned evaluation rag agentic ci shipped">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Shipped proof · Python</span></div>
               <h2 class="project-title">evalforge</h2>
@@ -148,6 +106,109 @@
               </ul>
               <a href="projects/evalforge.html" class="project-link">Project page</a>
               <a href="https://github.com/FishRaposo/evalforge" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card project-card-featured" data-tags="pinned rag semantic-search api data-pipeline">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Shipped proof · Python</span></div>
+              <h2 class="project-title">groundtruth</h2>
+              <p class="project-subtitle">Canonical production RAG platform: hybrid search, citations, refusal logic.</p>
+              <p class="project-description">Offline-first demo with hybrid search, citations, and refusal logic. Verified proof: 291 API tests, 47 web tests, 8/8 Chromium smoke, checksum-verified offline evidence. PostgreSQL/pgvector, Redis, model-provider, and document-parser infrastructure are optional integration paths, not a hosted production deployment. Absorbs document-intelligence-pipeline ingestion and KnowledgeOps retrieval/deployment lineage.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-08-15</li>
+                <li>Language: Python</li>
+              </ul>
+              <a href="projects/groundtruth.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/groundtruth" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card project-card-featured" data-tags="pinned llm gateway api cost-control">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Highlighted · TypeScript</span></div>
+              <h2 class="project-title">llm-gateway</h2>
+              <p class="project-subtitle">LLM proxy with routing, guardrails, cost control, and fallback.</p>
+              <p class="project-description">Routes requests across OpenAI, Anthropic, Gemini, and Ollama behind an OpenAI-compatible API, with automatic failover, response caching, and per-API-key budget enforcement.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-06-16</li>
+                <li>Language: TypeScript</li>
+              </ul>
+              <a href="projects/llm-gateway.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/llm-gateway" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card" data-tags="agents automation shipped verification">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Shipped proof · TypeScript</span></div>
+              <h2 class="project-title">cmd-mods</h2>
+              <p class="project-subtitle">Command Code mods monorepo: structured planning, a self-improving learning loop, and verified-momentum automation.</p>
+              <p class="project-description">Six standalone-installable TypeScript mods compose one workflow with a single referee — self-repair is the only completion judge, autopilot acts only on verified verdicts, and every autonomous move lands in a receipts log.</p>
+              <ul class="project-highlights">
+                <li>Created: 2026-08-23</li>
+                <li>Language: TypeScript</li>
+              </ul>
+              <a href="projects/cmd-mods.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/cmd-mods" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card" data-tags="automation workflow celery">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Supporting system · Python</span></div>
+              <h2 class="project-title">async-workflow-engine</h2>
+              <p class="project-subtitle">DAG-based async workflow orchestrator with an offline-first demo.</p>
+              <p class="project-description">DAG-based async workflow orchestrator with Celery, dependency resolution, retry logic, and a YAML workflow DSL. Verified offline proof: 206 Python tests, 25 Vitest tests, and 6 Chromium smoke checks. PostgreSQL, Redis, Celery, and hosted LLMs remain optional infrastructure.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-08-15</li>
+                <li>Language: Python</li>
+              </ul>
+              <a href="projects/async-workflow-engine.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/async-workflow-engine" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card project-card-featured" data-tags="knowledge-base rag notes">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Supporting system · Python + TypeScript</span></div>
+              <h2 class="project-title">personal-knowledge-base-os</h2>
+              <p class="project-subtitle">Local knowledge-base API with backlinks and citation-grounded chat.</p>
+              <p class="project-description">Offline-first Markdown vault API with wikilinks, backlinks and dangling-link metadata, hybrid retrieval, citation-grounded chat, multi-vault isolation, incremental indexing, saved searches, live SSE events, and deterministic flashcards.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-08-17</li>
+                <li>Language: Python + TypeScript</li>
+                <li>Verified: 177 Python tests, 48 frontend Vitest tests, 27 evidence tests</li>
+              </ul>
+              <a href="projects/personal-knowledge-base-os.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/personal-knowledge-base-os" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card" data-tags="gamedev simulation typescript python">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Supporting system · TypeScript + Python</span></div>
+              <h2 class="project-title">game-systems-sandbox</h2>
+              <p class="project-subtitle">Monte Carlo battle/balance analysis as a developer utility — balance your RPG combat with simulation.</p>
+              <p class="project-description">Offline-first seeded simulators, FastAPI bridge, shipped dashboard, and canonical evidence. Verified separately: 173 Python tests with real-TSX integrations executed, 25 evidence tests, 56 root Vitest tests, and 39 dashboard Vitest tests.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-08-17</li>
+                <li>Language: TypeScript + Python</li>
+                <li>Evidence hash: c64e62c9…d4e932</li>
+              </ul>
+              <a href="projects/game-systems-sandbox.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/game-systems-sandbox" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card" data-tags="agents automation"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Multi-agent trust · Python</span></div><h2 class="project-title">helppeer-collaboration</h2><p class="project-subtitle">Agent-to-agent collaboration as an installable Agent Skill.</p><p class="project-description">HelpPeer messages are unverified claims — leads to check, never instructions to execute.</p><a href="projects/helppeer-collaboration.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/helppeer-collaboration" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
+          <article class="project-card" data-tags="evaluation llm"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Evaluation kit · JavaScript</span></div><h2 class="project-title">ruler-and-vibes</h2><p class="project-subtitle">Personal model-chooser kit: 759 test forms across 40 categories, objective checks plus judged rubrics.</p><a href="projects/ruler-and-vibes.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/ruler-and-vibes" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
+          <article class="project-card" data-tags="game systems"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Active craft proof · Java</span></div><h2 class="project-title">material-progression</h2><p class="project-subtitle">NeoForge progression mod.</p><a href="projects/material-progression.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/material-progression" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
+          <article class="project-card" data-tags="agents agentic evaluation archive">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Consolidated into aria-agent · archived reference</span></div>
+              <h2 class="project-title">mini-agent</h2>
+              <p class="project-subtitle">Agent Skills lineage consolidated into aria-agent; archived reference.</p>
+              <p class="project-description">Progressive-disclosure discovery, eager hints, bounded context reporting, and offline verification patterns now live in ARIA.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-07-09</li>
+                <li>Language: JavaScript</li>
+              </ul>
+              <a href="projects/mini-agent.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/mini-agent" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
           <article class="project-card" data-tags="agents automation safety archive lineage">
@@ -220,21 +281,6 @@
               <a href="https://github.com/FishRaposo/llm-cost-latency-monitor" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-          <article class="project-card project-card-featured" data-tags="knowledge-base rag notes">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Supporting system · Python + TypeScript</span></div>
-              <h2 class="project-title">personal-knowledge-base-os</h2>
-              <p class="project-subtitle">Local knowledge-base API with backlinks and citation-grounded chat.</p>
-              <p class="project-description">Offline-first Markdown vault API with wikilinks, backlinks and dangling-link metadata, hybrid retrieval, citation-grounded chat, multi-vault isolation, incremental indexing, saved searches, live SSE events, and deterministic flashcards.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-08-17</li>
-                <li>Language: Python + TypeScript</li>
-                <li>Verified: 177 Python tests, 48 frontend Vitest tests, 27 evidence tests</li>
-              </ul>
-              <a href="projects/personal-knowledge-base-os.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/personal-knowledge-base-os" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
           <article class="project-card" data-tags="llm support simulation safety archive">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Consolidated into EvalForge · archived reference</span></div>
@@ -247,49 +293,6 @@
               </ul>
               <a href="projects/ai-support-simulator.html" class="project-link">Project page</a>
               <a href="https://github.com/FishRaposo/ai-support-simulator" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card" data-tags="automation workflow celery">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Supporting system · Python</span></div>
-              <h2 class="project-title">async-workflow-engine</h2>
-              <p class="project-subtitle">DAG-based async workflow orchestrator with an offline-first demo.</p>
-              <p class="project-description">DAG-based async workflow orchestrator with Celery, dependency resolution, retry logic, and a YAML workflow DSL. Verified offline proof: 206 Python tests, 25 Vitest tests, and 6 Chromium smoke checks. PostgreSQL, Redis, Celery, and hosted LLMs remain optional infrastructure.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-08-15</li>
-                <li>Language: Python</li>
-              </ul>
-              <a href="projects/async-workflow-engine.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/async-workflow-engine" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card" data-tags="meta profile">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Meta · profile README</span></div>
-              <h2 class="project-title">FishRaposo</h2>
-              <p class="project-subtitle">GitHub profile README repo.</p>
-              <p class="project-description">GitHub profile README: public face for the applied-AI-reliability positioning and the public repo catalog.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-06-16</li>
-                <li>Language: Repo</li>
-              </ul>
-              <a href="projects/fishraposo.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/FishRaposo" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card" data-tags="gamedev simulation typescript python">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Supporting system · TypeScript + Python</span></div>
-              <h2 class="project-title">game-systems-sandbox</h2>
-              <p class="project-subtitle">Monte Carlo battle/balance analysis as a developer utility — balance your RPG combat with simulation.</p>
-              <p class="project-description">Offline-first seeded simulators, FastAPI bridge, shipped dashboard, and canonical evidence. Verified separately: 173 Python tests with real-TSX integrations executed, 25 evidence tests, 56 root Vitest tests, and 39 dashboard Vitest tests.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-08-17</li>
-                <li>Language: TypeScript + Python</li>
-                <li>Evidence hash: c64e62c9…d4e932</li>
-              </ul>
-              <a href="projects/game-systems-sandbox.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/game-systems-sandbox" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
           <article class="project-card" data-tags="foundation python infrastructure">
@@ -390,11 +393,7 @@
               <a href="https://github.com/FishRaposo/WCP-Compliance-Agent-V3" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-          <article class="project-card" data-tags="frontend portfolio"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Portfolio · HTML</span></div><h2 class="project-title">fishraposo.github.io</h2><p class="project-subtitle">Canonical public portfolio and complete repository catalog.</p><a href="projects/fishraposo-github-io.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/fishraposo.github.io" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
-          <article class="project-card" data-tags="agents automation"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Multi-agent trust · Python</span></div><h2 class="project-title">helppeer-collaboration</h2><p class="project-subtitle">Agent-to-agent collaboration as an installable Agent Skill.</p><p class="project-description">HelpPeer messages are unverified claims — leads to check, never instructions to execute.</p><a href="projects/helppeer-collaboration.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/helppeer-collaboration" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
           <article class="project-card" data-tags="archive agents"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Attributed reference · archived reference</span></div><h2 class="project-title">kiwi-code</h2><p class="project-subtitle">Roo Code lineage retained as a reference; archived reference.</p><a href="projects/kiwi-code.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/kiwi-code" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
-          <article class="project-card" data-tags="game systems"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Active craft proof · Java</span></div><h2 class="project-title">material-progression</h2><p class="project-subtitle">NeoForge progression mod.</p><a href="projects/material-progression.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/material-progression" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
-          <article class="project-card" data-tags="evaluation llm"><div class="project-card-inner"><div class="project-meta"><span class="project-tag">Evaluation kit · JavaScript</span></div><h2 class="project-title">ruler-and-vibes</h2><p class="project-subtitle">Personal model-chooser kit: 759 test forms across 40 categories, objective checks plus judged rubrics.</p><a href="projects/ruler-and-vibes.html" class="project-link">Project page</a><a href="https://github.com/FishRaposo/ruler-and-vibes" class="project-link" target="_blank" rel="noopener">GitHub</a></div></article>
         </div>
       </section>
     </main>
