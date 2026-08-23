@@ -9,6 +9,7 @@
 - **Portfolio framing:** shipped public proof + complete public repo catalog, everything inspectable at source.
 - **Current role:** Founding Engineer at Zap Viagens (Jun 2026–present) — an AI products company running a multi-tenant CRM AI platform for travel agencies on a serverless stack (TypeScript, Vercel, Supabase) with self-hosted open-source LLMs (Google Gemma 4) on rented GPU; privacy-first architecture, security verified with a three-pass audit (manual, automated, LLM-assisted).
 - **Public repo count:** 31 public repositories in the 2026-08-24 inventory.
+- **Contact:** Freelance engagements via Upwork — https://www.upwork.com/freelancers/~01ca94c53d0d0101f3 · GitHub: https://github.com/FishRaposo · X: https://x.com/FishRaposo
 
 ## Source hierarchy
 
