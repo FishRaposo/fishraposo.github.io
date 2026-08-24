@@ -22,6 +22,15 @@ The old surface spec (`archive/career/Showcase/site-spec.md`) is superseded — 
 
 **Status (2026-08-24, portfolio best-practices pass — pushed directly to main):** Cross-referenced the site against 2026 developer-portfolio research. Added: favicon.svg (lightning bolt, brand colors — the inline-favicon claim is now true; also injected at runtime by main.js as a fallback); og:image/twitter:image meta on index, projects, and the three highest-traffic project pages (asset `og-image.png` pending owner upload via web UI — binary files can't be pushed through the API channel used here); JSON-LD Person+WebSite schema on index.html (completes the llms.txt + structured-data citation stack); a Writing section on the homepage linking the published "Taste Is All You Need" essay; Upwork contact link in every footer (injected + hardcoded on edited pages) and the homepage end-CTA switched from the catalog to the hire path. main.js fixes: hardcoded headers/footers on project pages are now both replaced by the injected chrome (previously only the header was removed — footers rendered twice); nav/footer nav landmarks gained aria-labels; active nav links get aria-current="page". WCP V5 page gained a test-distribution figure (inline SVG; numbers are the page's own per-service bins). llms.txt canon gained a Contact line; sitemap lastmods refreshed sitewide. Deep project pages beyond WCP/aria/cmd-mods receive favicon and the Upwork footer via main.js at runtime; their hardcoded no-JS footers are unchanged. Still owner-pending: a real screen-recorded GIF of the WCP evidence run (needs his machine), and an email address if he wants one published.
 
+**Status (2026-08-23, fixed-pin rename reconciliation):** The current six spotlight
+repos are WCP V5, aria-agent, command-code-mods, agenttrace, evalforge, and
+groundtruth. The public `cmd-mods` repository was renamed to
+`FishRaposo/command-code-mods`; the catalog, homepage proof grid, manifest, sitemap,
+and project page now use that canonical name. LLM Gateway remains in the complete
+catalog as supporting infrastructure, not a pinned spotlight. The NDS toolkit is
+documented in the hub as a future spotlight switch once its public-safe benchmark
+receipt, ROM-free demo, CI, and proof boundaries are ready.
+
 The former local reference library for 13 archived references was a dated audit snapshot and was removed after reconciliation. Project pages keep their public GitHub provenance links; current hub records live outside this public site at `../portfolio-inventory/` (`PROJECTS.md`, dated inventory/consolidation snapshots, and finalization receipts) rather than exposing local filesystem paths.
 
 ## Commands
