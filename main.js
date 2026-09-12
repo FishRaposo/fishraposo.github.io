@@ -75,7 +75,7 @@
     '      <a href="https://www.upwork.com/freelancers/~01ca94c53d0d0101f3" target="_blank" rel="noopener">Upwork</a>',
     '      <a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a>',
     '      <a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a>',
-    '      <a href="mailto:viniciusraposo71@hotmail.com">Email</a>',
+    '      <a href="mailto:fishraposo@gmail.com">Email</a>',
     '    </nav>',
     '  </div>',
     '  <p class="footer-copyright">&copy; 2026 Vinícius Raposo. All rights reserved.</p>',
