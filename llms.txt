@@ -8,7 +8,7 @@
 - **Hook:** This isn't cost arbitrage. It's engineering arbitrage.
 - **Portfolio framing:** shipped public proof + complete public repo catalog, everything inspectable at source.
 - **Current role:** Founding Engineer at Zap Viagens (Jun 2026–present) — an AI products company running a multi-tenant CRM AI platform for travel agencies on a serverless stack (TypeScript, Vercel, Supabase) with self-hosted open-source LLMs (Google Gemma 4) on rented GPU; privacy-first architecture, security verified with a three-pass audit (manual, automated, LLM-assisted).
-- **Public repo count:** 32 public repositories — the 2026-08-24 inventory listed 31; entrega-clara went public 2026-08-30.
+- **Public repo count:** 33 public repositories (GitHub API, 2026-09-14) — up from 32; entrega-clara was the prior +1 (2026-08-30). Live inventory lists 33 public repos including archived; this catalog has 29 project pages (profile README and fishraposo.github.io excluded). hermes-agent and portfolio-builder remain public archived without pages.
 - **Contact:** Freelance engagements via Upwork — https://www.upwork.com/freelancers/~01ca94c53d0d0101f3 · GitHub: https://github.com/FishRaposo · X: https://x.com/FishRaposo · Email: fishraposo@gmail.com
 
 ## Source hierarchy
