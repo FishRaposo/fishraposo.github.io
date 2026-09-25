@@ -39,6 +39,33 @@
         </div>
       </section>
       <section class="section section--tight">
+        <p class="page-description">Without a bounded harness, agent runs expand unchecked—tools fire without approval gates, skills leak context into every turn, and failures cannot be traced or replayed after the fact.</p>
+        <div class="project-thesis">The harness bounds the model; skills disclose only when activated.</div>
+        <div class="portfolio-demo-card">
+          <p>Offline demo:</p>
+          <code>cd frontend &amp;&amp; npm run demo:ui</code>
+        </div>
+        <h2 class="portfolio-walkthrough-heading">Walkthrough</h2>
+        <div class="portfolio-walkthrough">
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/aria-blocked.png" alt="Prompt injection blocked by deterministic safety before any tool runs.">
+            <figcaption>Prompt injection blocked by deterministic safety before any tool runs. Sample data.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/aria-trace.png" alt="Safe calculator tool call with ordered execution trace.">
+            <figcaption>Safe calculator tool call with ordered execution trace. Sample data.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/aria-approval.png" alt="Gated email draft waits in the approval queue.">
+            <figcaption>Gated email draft waits in the approval queue. Sample data.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/aria-skills.png" alt="Skills disclose only when activated on a run.">
+            <figcaption>Skills disclose only when activated on a run. Sample data.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section--tight">
         <div class="products-grid products-grid-code">
           <div class="product-card product-card--featured"><h2 class="product-title">Why it matters</h2><p class="product-description">ARIA turns approval, safety, trace, cost, replay, and reproducibility boundaries into inspectable local code instead of relying on a hosted control plane.</p></div>
           <div class="product-card"><h2 class="product-title">Verified proof</h2><p class="product-description">200 Python tests, 12 focused Agent Skills tests, Ruff and Pyright checks, 31 frontend tests, checksum-verified offline evidence, and six Chromium smoke tests passed on 2026-08-15.</p></div>

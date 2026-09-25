@@ -35,6 +35,29 @@
         </div>
       </section>
       <section class="section section--tight">
+        <p class="page-description">Without corpus-grounded answers and explicit refusal, RAG systems hallucinate confidently—users get fluent wrong answers instead of citations or an honest refusal when the corpus does not support a claim.</p>
+        <div class="project-thesis">Answers come from the corpus, or the system refuses.</div>
+        <div class="portfolio-demo-card">
+          <p>Offline demo:</p>
+          <code>cd apps/web &amp;&amp; npm run demo:ui</code>
+        </div>
+        <h2 class="portfolio-walkthrough-heading">Walkthrough</h2>
+        <div class="portfolio-walkthrough">
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/gt-cited.png" alt="Answer cites two corpus chunks with a visible retrieval trace.">
+            <figcaption>Answer cites two corpus chunks with a visible retrieval trace. Sample data.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/gt-refusal.png" alt="Question unsupported by the corpus gets an explicit refusal, not a guess.">
+            <figcaption>Question unsupported by the corpus gets an explicit refusal, not a guess. Sample data.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/gt-corpus.png" alt="The demo corpus and version history the answers draw from.">
+            <figcaption>The demo corpus and version history the answers draw from. Sample data.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section--tight">
         <div class="products-grid products-grid-code">
           <div class="product-card product-card--featured"><h2 class="product-title">Why it matters</h2><p class="product-description">Canonical production RAG platform: hybrid search, citations, refusal logic. The inspectable demo is offline-first; PostgreSQL/pgvector, Redis, model providers, and document parsers are optional infrastructure, so this page does not claim a hosted production deployment. It absorbs document-intelligence-pipeline and KnowledgeOps lineage.</p></div>
           <div class="product-card"><h2 class="product-title">Verified proof</h2><p class="product-description">291 API tests, Ruff and Pyright checks, 47 web tests, 8/8 desktop and mobile Chromium smoke, and byte-identical checksum-verified offline evidence passed on 2026-08-15.</p></div>

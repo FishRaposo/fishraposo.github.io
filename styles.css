@@ -494,7 +494,6 @@ h1 {
 .hero-domain     { animation: hero-in 400ms var(--ease-out) 160ms both; }
 .hero-now        { animation: hero-in 400ms var(--ease-out) 200ms both; }
 .hero-hero-actions { animation: hero-in 400ms var(--ease-out) 240ms both; }
- to { opacity: 1; transform: scale(1); } }
 
 /* Sections */
 .section { padding: 40px 0; }
@@ -1457,3 +1456,26 @@ h2 {
   font-weight: 600;
   color: var(--color-text) !important;
 }
+
+/* ── Portfolio walkthrough (pinned project pages) ── */
+.portfolio-walkthrough-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 28px 0 16px;
+  letter-spacing: -0.01em;
+}
+.portfolio-walkthrough { margin: 0 0 32px; }
+.portfolio-figure { margin: 0 0 24px; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--border-default); background: var(--color-surface); }
+.portfolio-figure img { width: 100%; display: block; }
+.portfolio-figure figcaption { padding: 12px 16px; font-size: 13px; line-height: 1.5; color: var(--color-text-muted); border-top: 1px solid var(--border-subtle); word-wrap: break-word; overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .portfolio-walkthrough-heading { font-size: 16px; margin-top: 20px; }
+  .portfolio-figure figcaption { padding: 10px 12px; font-size: 12px; }
+  .portfolio-demo-card { padding: 16px; margin: 16px 0; }
+  .project-card-thumb { margin-bottom: 12px; }
+}
+.portfolio-demo-card { border: 1px solid var(--border-default); border-radius: var(--radius-card); padding: 20px 24px; margin: 24px 0; background: rgba(148,163,184,0.05); }
+.portfolio-demo-card code { font-family: monospace; font-size: 13px; }
+.project-card-thumb { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 8px; margin-bottom: 16px; border: 1px solid var(--border-subtle); }
+.project-thesis { font-size: 14px; font-weight: 500; color: var(--color-accent-light); margin: 8px 0 12px; }

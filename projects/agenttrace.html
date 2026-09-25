@@ -35,6 +35,25 @@
         </div>
       </section>
       <section class="section section--tight">
+        <p class="page-description">Without post-hoc run inspection, agent failures stay opaque—you cannot attribute cost, replay decisions step by step, or debug what the model and tools actually did on a failed run.</p>
+        <div class="project-thesis">A run can be inspected after the fact.</div>
+        <div class="portfolio-demo-card">
+          <p>Offline demo:</p>
+          <code>make demo-ui</code>
+        </div>
+        <h2 class="portfolio-walkthrough-heading">Walkthrough</h2>
+        <div class="portfolio-walkthrough">
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/trace-replay.png" alt="Deterministic replay of the issue-to-draft-PR run.">
+            <figcaption>Deterministic replay of the issue-to-draft-PR run. Sample data.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/trace-timeline.png" alt="Span timeline with token use and cost attribution.">
+            <figcaption>Span timeline with token use and cost attribution. Sample data.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section--tight">
         <div class="products-grid products-grid-code">
           <div class="product-card product-card--featured"><h2 class="product-title">Why it matters</h2><p class="product-description">The default demonstration runs locally without credentials or hosted services. The absorbed issue/PR scenario proves path and branch refusals, test gating, explicit approval, draft-only intent, ordered audit events, and deterministic replay without contacting GitHub.</p></div>
           <div class="product-card"><h2 class="product-title">Verified proof</h2><p class="product-description">132 SDK tests, 98 collector tests, 24 dashboard tests, package and isolated-wheel checks, and checksum-verified evidence. Real GitHub or LLM providers, server routes for this workflow, hosted teams, and external infrastructure remain optional or deferred.</p></div>
