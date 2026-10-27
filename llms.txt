@@ -35,11 +35,13 @@ These match the GitHub profile README pin order (2026-09-13).
 
 ## Games
 
-Game projects, listed together for game-development roles.
+Three games built for game-development roles, each shipping a task pack: planted bugs and feature requests with briefs (player, QA, design or producer voice), acceptance criteria (input sequence, expected visual outcome, verifiable game state), reference solutions and automated checks, verified to fail on the starting state and pass on the solution. Plain JavaScript on a 2D canvas, no engine, no asset files, MIT.
 
-- **recall** — Browser arcade game in plain JavaScript (no engine, no asset files, synthesized sound): one throwing blade that returns; catching it after a hit raises the multiplier. Ships a task pack of four planted gameplay bugs and two feature requests, each with a brief (player, QA, design or producer voice), acceptance criteria (input sequence, expected visual outcome, verifiable game state), a reference solution and a headless Chromium check. Verified: 18 unit tests; every task check fails on its starting state and passes on its reference solution. MIT. — https://fishraposo.github.io/projects/recall.html — https://github.com/FishRaposo/recall
-- **material-progression** — NeoForge Minecraft mod (Java) rebuilding progression around geology, metallurgy and workshops; local 0.2.0 release candidate, not a public release. — https://fishraposo.github.io/projects/material-progression.html — https://github.com/FishRaposo/material-progression
-- **game-systems-sandbox** — Seeded Monte Carlo combat, loot, XP and economy balance simulators with an offline dashboard. — https://fishraposo.github.io/projects/game-systems-sandbox.html — https://github.com/FishRaposo/game-systems-sandbox
+- **recall** — Arcade action: one throwing blade that returns; catching it after a hit raises the multiplier. 18 unit tests; task pack of four bugs and two features, checked in headless Chromium through a deterministic ?harness mode. — https://fishraposo.github.io/projects/recall.html — https://github.com/FishRaposo/recall
+- **wick** — Turn-based roguelike where lantern oil is the field of view: procedural floors, shadowcasting FOV, Dijkstra-map AI (moths chase light, shades flee it, hounds hunt by sound along corridors). Pure rules module; 18 unit tests including connectivity over 1,800 generated floors; task pack of two bugs and one feature. — https://fishraposo.github.io/projects/wick.html — https://github.com/FishRaposo/wick
+- **thaw** — Ice-sliding puzzle game in twelve rooms; a breadth-first solver re-checks every par on every test run (19 unit tests); levels found by a solver-driven search and picked by hand; task pack of two bugs and one feature. — https://fishraposo.github.io/projects/thaw.html — https://github.com/FishRaposo/thaw
+
+Also game work: **material-progression** (NeoForge Minecraft mod, Java; local 0.2.0 release candidate, not a public release) — https://fishraposo.github.io/projects/material-progression.html · **game-systems-sandbox** (seeded Monte Carlo balance simulators) — https://fishraposo.github.io/projects/game-systems-sandbox.html
 
 ## Writing
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thaw — Vinícius Raposo</title>
+  <meta name="description" content="Thaw: an ice-sliding puzzle game in twelve rooms, with a breadth-first solver that proves every level, and a verified task pack.">
+  <meta name="author" content="Vinícius Raposo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://fishraposo.github.io/projects/thaw.html">
+  <meta property="og:title" content="thaw — Vinícius Raposo">
+  <meta property="og:description" content="Thaw: an ice-sliding puzzle game in twelve rooms, with a breadth-first solver that proves every level, and a verified task pack.">
+  <meta property="og:image" content="https://fishraposo.github.io/images/portfolio/thaw-ferry.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="container">
+    <header class="header"><div class="header-content"><a href="../index.html" class="brand"><p class="brand-name">Vinícius Raposo</p><p class="brand-title">AI reliability, systems engineering, and serious AI-assisted development.</p><p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p></a><nav class="nav"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="https://github.com/FishRaposo/thaw" class="nav-link" target="_blank" rel="noopener">GitHub</a></nav></div></header>
+    <main id="main-content" data-cta-title="View the source" data-cta-subtitle="This page summarizes the public GitHub repository. The repo remains the source of truth for code, tests, and implementation details." data-cta-button="Open on GitHub" data-cta-url="https://github.com/FishRaposo/thaw">
+      <section class="page-hero">
+        <div class="badge">Game · JavaScript</div>
+        <h1 class="page-title"><span class="gradient-text">thaw</span></h1>
+        <p class="page-subtitle">Twelve rooms, and a solver that proves every one.</p>
+        <p class="page-description">An ice-sliding puzzle game. You slide until something stops you: snow, rock, or a crate you kicked into place. Slide a crate into water and it sinks into a snow tile you can stand on; cracked ice breaks behind whatever leaves it. Reach the hut in par for three stars. A breadth-first solver proves every room: the tests re-solve all twelve on every run and fail if a stated par is wrong or a level's crates aren't actually needed.</p>
+        <div class="hero-bins" style="justify-content: center;">
+          <span class="bin-tag">Language: JavaScript</span>
+          <span class="bin-tag">Released: v1.0.0, 2026-10-27</span>
+          <span class="bin-tag">Licence: MIT</span>
+        </div>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="https://github.com/FishRaposo/thaw" class="btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/FishRaposo/thaw/tree/main/tasks" class="btn-secondary" target="_blank" rel="noopener">Task pack</a>
+          <a href="../index.html#games" class="btn-secondary">All games</a>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="project-thesis">Par comes from the solver, never from a person.</div>
+        <div class="portfolio-demo-card">
+          <p>Run it locally, then verify the task pack:</p>
+          <code>npm start &nbsp;·&nbsp; npm test &nbsp;·&nbsp; npm run tasks</code>
+        </div>
+        <h2 class="portfolio-walkthrough-heading">Walkthrough</h2>
+        <div class="portfolio-walkthrough">
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/thaw-demo.gif" alt="The player slides across ice, kicks a crate into the water to make a bridge and reaches the hut.">
+            <figcaption>Level 9, Ferry: kick a crate into the water, cross on the snow it leaves, reach the hut.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/thaw-levels.png" alt="The level select screen: twelve rooms with star ratings.">
+            <figcaption>Twelve rooms. Each new element arrives alone before the later rooms combine them.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/thaw-task-hint.png" alt="An orange arrow beside the player suggests the next move; the HUD says hint used.">
+            <figcaption>Task feat-01's reference solution: a hint computed by the solver from wherever the player stands.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="section-header"><div><h2>Task pack</h2><p class="section-description">Three tasks in the shape used to evaluate AI agents on game development. Each has a brief written as it would arrive, acceptance criteria (input sequence, expected visual outcome, verifiable game state), a reference solution with root-cause notes, and an automated check against the real rules. A verifier proves every check fails on the starting state and passes on the solution, with the whole unit suite green.</p></div></div>
+        <div class="products-grid products-grid-code">
+          <div class="product-card"><h3 class="product-title">Undo doesn't fix the ice</h3><p class="project-thesis">Bug · player report</p><p class="product-description">The undo snapshot became a shallow spread that shares the tile array with the live game, so broken ice and filled water survive an undo.</p></div>
+          <div class="product-card"><h3 class="product-title">Next level starts with a move made</h3><p class="project-thesis">Bug · QA ticket</p><p class="product-description">Presses queued during the winning slide aren't cleared when a level starts, so they play on the next level (or after a restart).</p></div>
+          <div class="product-card"><h3 class="product-title">Hints</h3><p class="project-thesis">Feature · producer request</p><p class="product-description">Run the solver from the current state and show the next move; report dead ends; cap a hinted run at two stars. Touches the solver, session, scoring, UI and input.</p></div>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="products-grid products-grid-code">
+          <div class="product-card product-card--featured"><h2 class="product-title">Verified proof</h2><p class="product-description">19 unit tests: all twelve levels solved at their stated par and replayed through the rules, crates required where present, every rule, undo, the input queue and stars. All three task checks fail on their starting state and pass on their solution with the suite green. A headless browser smoke test plays all twelve rooms through key presses at par and tries a swipe, with no console errors.</p></div>
+          <div class="product-card"><h2 class="product-title">How it is built</h2><p class="product-description">Pure rules, a pure session (levels, undo, stars, input queue, with time passed in) and a separate screen. Level 1 was built by hand; the rest were found by a solver-driven search that keeps only rooms whose shortest solution is long enough and uses the mechanic being taught, then picked and ordered by hand.</p></div>
+          <div class="product-card"><h2 class="product-title">Honest limits</h2><p class="product-description">Twelve rooms. Tested in Chromium; Firefox and Safari use only standard canvas and WebAudio APIs but haven't been verified. Built without an engine.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="footer-content"><div><p class="footer-brand-name">Vinícius Raposo</p><p class="footer-brand-title">I build the systems that work while you don&rsquo;t.</p><p class="footer-brand-tagline">AI reliability, systems engineering, and serious AI-assisted development.</p></div><nav class="footer-nav"><a href="../index.html">Home</a><a href="../projects.html">Projects</a><a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a><a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a></nav></div><p class="footer-copyright">&copy; 2026 Vinícius Raposo. All rights reserved.</p></footer>
+  </div>
+<script src="../main.js"></script></body>
+</html>

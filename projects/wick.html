@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wick — Vinícius Raposo</title>
+  <meta name="description" content="Wick: a turn-based roguelike where your lantern oil is your field of view. Procedural floors, shadowcasting, Dijkstra-map AI, and a verified task pack.">
+  <meta name="author" content="Vinícius Raposo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://fishraposo.github.io/projects/wick.html">
+  <meta property="og:title" content="wick — Vinícius Raposo">
+  <meta property="og:description" content="Wick: a turn-based roguelike where your lantern oil is your field of view. Procedural floors, shadowcasting, Dijkstra-map AI, and a verified task pack.">
+  <meta property="og:image" content="https://fishraposo.github.io/images/portfolio/wick-floor3.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="container">
+    <header class="header"><div class="header-content"><a href="../index.html" class="brand"><p class="brand-name">Vinícius Raposo</p><p class="brand-title">AI reliability, systems engineering, and serious AI-assisted development.</p><p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p></a><nav class="nav"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="https://github.com/FishRaposo/wick" class="nav-link" target="_blank" rel="noopener">GitHub</a></nav></div></header>
+    <main id="main-content" data-cta-title="View the source" data-cta-subtitle="This page summarizes the public GitHub repository. The repo remains the source of truth for code, tests, and implementation details." data-cta-button="Open on GitHub" data-cta-url="https://github.com/FishRaposo/wick">
+      <section class="page-hero">
+        <div class="badge">Game · JavaScript</div>
+        <h1 class="page-title"><span class="gradient-text">wick</span></h1>
+        <p class="page-subtitle">The oil is the light. The light is the map.</p>
+        <p class="page-description">A turn-based roguelike on procedurally generated floors. You need the stairs, and you only see what your lantern lights; oil burns as you walk, and the light shrinks with it. Moths fly at the light, shades flee its bright core and wait at the edge for it to go out, and hounds ignore it and hunt by sound, which travels along corridors, not through rock. Plain JavaScript on a 2D canvas, no engine and no asset files; the rules are a pure module with no DOM.</p>
+        <div class="hero-bins" style="justify-content: center;">
+          <span class="bin-tag">Language: JavaScript</span>
+          <span class="bin-tag">Released: v1.0.0, 2026-10-27</span>
+          <span class="bin-tag">Licence: MIT</span>
+        </div>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="https://github.com/FishRaposo/wick" class="btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/FishRaposo/wick/tree/main/tasks" class="btn-secondary" target="_blank" rel="noopener">Task pack</a>
+          <a href="../index.html#games" class="btn-secondary">All games</a>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="project-thesis">Three enemies, three relationships to the light.</div>
+        <div class="portfolio-demo-card">
+          <p>Run it locally, then verify the task pack:</p>
+          <code>npm start &nbsp;·&nbsp; npm test &nbsp;·&nbsp; npm run tasks</code>
+        </div>
+        <h2 class="portfolio-walkthrough-heading">Walkthrough</h2>
+        <div class="portfolio-walkthrough">
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/wick-demo.gif" alt="The lantern lights a small circle of a generated floor as the player heads for the stairs.">
+            <figcaption>Lantern light on a generated floor. Recorded from a scripted bot run with player damage switched off.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/wick-floor3.png" alt="Floor 3: lit tiles near the player, remembered tiles in cool grey, a hound nearby.">
+            <figcaption>Floor 3. What the lantern lights is warm; what you remember is cool and flat; the rest is dark.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/wick-task-pour.png" alt="A burning pool of oil lights a room the player has walked away from.">
+            <figcaption>Task feat-01's reference solution: a pool of poured oil keeps a room lit after you leave it.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="section-header"><div><h2>Task pack</h2><p class="section-description">Three tasks in the shape used to evaluate AI agents on game development. Each has a brief written as it would arrive, acceptance criteria (input sequence, expected visual outcome, verifiable game state), a reference solution with root-cause notes, and an automated check against the real rules. A verifier proves every check fails on the starting state and passes on the solution, with the whole unit suite green.</p></div></div>
+        <div class="products-grid products-grid-code">
+          <div class="product-card"><h3 class="product-title">Hounds hear through walls</h3><p class="project-thesis">Bug · player report</p><p class="product-description">Hearing was switched to straight-line distance "to save a pathfind", so hounds wake behind solid rock. Sound is supposed to travel along corridors.</p></div>
+          <div class="product-card"><h3 class="product-title">Enemies follow you downstairs</h3><p class="project-thesis">Bug · QA ticket</p><p class="product-description">The new floor appends its enemies instead of replacing the old ones; survivors arrive at their old coordinates, some inside walls.</p></div>
+          <div class="product-card"><h3 class="product-title">Pour oil</h3><p class="project-thesis">Feature · design spec</p><p class="product-description">Spend 15 oil to leave a burning pool: a second light source for vision, shade fear and moth attraction, plus rendering, input and audio.</p></div>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="products-grid products-grid-code">
+          <div class="product-card product-card--featured"><h2 class="product-title">Verified proof</h2><p class="product-description">18 unit tests: connectivity over 1,800 generated floors, stairs placement, FOV shape and wall blocking, flee maps, each enemy's behaviour and the turn rules. All three task checks fail on their starting state and pass on their solution with the suite green. A headless browser smoke test plays several floors, tap input, death and restart with no console errors.</p></div>
+          <div class="product-card"><h2 class="product-title">How it is built</h2><p class="product-description">Rooms by rejection sampling joined left to right with L-shaped corridors (connected by construction), plus extra corridors for loops; stairs on the farthest tile by walking distance. Recursive shadowcasting for field of view; BFS distance maps for the AI, with a Brogue-style flee map for shades. Every random choice goes through a seeded PRNG.</p></div>
+          <div class="product-card"><h2 class="product-title">Honest limits</h2><p class="product-description">Four-directional movement, no saves. Tested in Chromium; Firefox and Safari use only standard canvas and WebAudio APIs but haven't been verified. Built without an engine.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="footer-content"><div><p class="footer-brand-name">Vinícius Raposo</p><p class="footer-brand-title">I build the systems that work while you don&rsquo;t.</p><p class="footer-brand-tagline">AI reliability, systems engineering, and serious AI-assisted development.</p></div><nav class="footer-nav"><a href="../index.html">Home</a><a href="../projects.html">Projects</a><a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a><a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a></nav></div><p class="footer-copyright">&copy; 2026 Vinícius Raposo. All rights reserved.</p></footer>
+  </div>
+<script src="../main.js"></script></body>
+</html>
