@@ -1480,4 +1480,6 @@ h2 {
 .portfolio-demo-card code { font-family: monospace; font-size: 13px; }
 .project-card-thumb { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 8px; margin-bottom: 16px; border: 1px solid var(--border-subtle); }
 .product-evidence { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin: 0 0 12px; padding: 6px 10px; border-left: 2px solid var(--color-accent); background: rgba(249,115,22,0.07); border-radius: 0 6px 6px 0; }
-.project-thesis { font-size: 14px; font-weight: 500; color: var(--color-accent-light); margin: 8px 0 12px; }
+.project-thesis { font-size: 14px; font-weight: 500; color: var(--color-accent-light); margin: 8px 0 12px; }/* Games section: three cards fill the row; anchored sections clear the sticky header */
+.products-grid-games { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+section[id] { scroll-margin-top: 190px; }

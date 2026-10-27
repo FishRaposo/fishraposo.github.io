@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recall — Vinícius Raposo</title>
+  <meta name="description" content="Recall: a browser arcade game about one blade that always comes back, plus a task pack of planted gameplay bugs and feature requests with briefs, acceptance criteria, reference solutions and automated checks.">
+  <meta name="author" content="Vinícius Raposo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://fishraposo.github.io/projects/recall.html">
+  <meta property="og:title" content="recall — Vinícius Raposo">
+  <meta property="og:description" content="A browser arcade game, and a verified task pack of planted gameplay bugs and feature requests.">
+  <meta property="og:image" content="https://fishraposo.github.io/images/portfolio/recall-late.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="container">
+    <header class="header"><div class="header-content"><a href="../index.html" class="brand"><p class="brand-name">Vinícius Raposo</p><p class="brand-title">AI reliability, systems engineering, and serious AI-assisted development.</p><p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p></a><nav class="nav"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="https://github.com/FishRaposo/recall" class="nav-link" target="_blank" rel="noopener">GitHub</a></nav></div></header>
+    <main id="main-content" data-cta-title="View the source" data-cta-subtitle="This page summarizes the public GitHub repository. The repo remains the source of truth for code, tests, and implementation details." data-cta-button="Open on GitHub" data-cta-url="https://github.com/FishRaposo/recall">
+      <section class="page-hero">
+        <div class="badge">Game · JavaScript</div>
+        <h1 class="page-title"><span class="gradient-text">recall</span></h1>
+        <p class="page-subtitle">One blade. It always comes back.</p>
+        <p class="page-description">A small browser arcade game. You have one throwing blade: throw it, call it back early, and catch it. Catching a blade that hit something raises your multiplier; catching it empty while enemies are on the board drops it. Every kill leaves ink on the floor, so each run ends as a painting you can save. Plain JavaScript on a 2D canvas, no engine and no asset files; every sound is synthesized in the browser.</p>
+        <div class="hero-bins" style="justify-content: center;">
+          <span class="bin-tag">Language: JavaScript</span>
+          <span class="bin-tag">Released: v1.1.0, 2026-10-27</span>
+          <span class="bin-tag">Licence: MIT</span>
+        </div>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="https://github.com/FishRaposo/recall" class="btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/FishRaposo/recall/tree/main/tasks" class="btn-secondary" target="_blank" rel="noopener">Task pack</a>
+          <a href="../index.html#games" class="btn-secondary">All games</a>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="project-thesis">A game that ships with the tests that break it on purpose.</div>
+        <div class="portfolio-demo-card">
+          <p>Run it locally, then verify the task pack:</p>
+          <code>npm start &nbsp;·&nbsp; npm test &nbsp;·&nbsp; npm run tasks</code>
+        </div>
+        <h2 class="portfolio-walkthrough-heading">Walkthrough</h2>
+        <div class="portfolio-walkthrough">
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/recall-demo.gif" alt="The blade flies out, cuts through enemies and curves back to the player.">
+            <figcaption>Out, through the pack, and back. Recorded from a scripted bot run with player damage switched off.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/recall-late.png" alt="Wave 4: brutes with hit-point pips, ink stains from earlier kills.">
+            <figcaption>Wave 4. Brutes show their remaining hits as pips; every earlier kill is still on the floor.</figcaption>
+          </figure>
+          <figure class="portfolio-figure">
+            <img src="../images/portfolio/recall-task-charge.png" alt="Charge ring filling around the player, then turning red at full charge.">
+            <figcaption>Task feat-02's reference solution: the charge ring filling, then full. The task asks for this from a producer's brief.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="section-header"><div><h2>Task pack</h2><p class="section-description">Six tasks in the shape used to evaluate AI agents on game development. Each has a brief written as it would arrive, acceptance criteria (input sequence, expected visual outcome, verifiable game state), a reference solution with root-cause notes, and an automated check that runs the real game in headless Chromium. A verifier proves every check fails on the starting state and passes on the solution.</p></div></div>
+        <div class="products-grid products-grid-code">
+          <div class="product-card"><h3 class="product-title">The blade only cuts once</h3><p class="project-thesis">Bug · player report</p><p class="product-description">Hit tracking isn't reset when the blade turns home, so the return leg passes through enemies without hitting them. Invisible against one-hit enemies; obvious on a brute's pips.</p></div>
+          <div class="product-card"><h3 class="product-title">Wave clears with enemies alive</h3><p class="project-thesis">Bug · QA ticket</p><p class="product-description">A refactor moved the wave-clear check before queued spawns merge, so killing a splitter last clears the wave while its two children are still chasing you.</p></div>
+          <div class="product-card"><h3 class="product-title">Darters are undodgeable</h3><p class="project-thesis">Bug · design review</p><p class="product-description">A "helpful" line re-aims the darter every frame of its wind-up, so the telegraph follows the player and the lunge ignores it.</p></div>
+          <div class="product-card"><h3 class="product-title">Throws get eaten after a hit</h3><p class="project-thesis">Bug · player report</p><p class="product-description">The input buffer is cleared every frame, so presses made during hitstop (when the simulation is frozen) are lost. Only reproducible right after hits.</p></div>
+          <div class="product-card"><h3 class="product-title">Bank shots</h3><p class="project-thesis">Feature · design spec</p><p class="product-description">Kills after a wall bounce score double with their own feedback. Touches the blade, scoring and the popup system.</p></div>
+          <div class="product-card"><h3 class="product-title">Charged throw</h3><p class="project-thesis">Feature · producer request</p><p class="product-description">Hold to charge: twice the distance, no brute slowdown, slower movement while charging. Touches input, the blade, player movement, UI and audio, and moves the throw from press to release without changing a tap.</p></div>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="products-grid products-grid-code">
+          <div class="product-card product-card--featured"><h2 class="product-title">Verified proof</h2><p class="product-description">18 unit tests (blade homing at 30, 60 and 144 fps, wave budgets, swept collision, seeded RNG). All six task checks fail on their starting state and pass on their reference solution. Scripted headless play-throughs reach wave 7 with every enemy type on screen and no console errors.</p></div>
+          <div class="product-card"><h2 class="product-title">How the checks see the game</h2><p class="product-description">Loading the game with <code>?harness</code> freezes its clock and exposes a test API: place the player, spawn enemies, script movement, aim and button holds, and step frames at a fixed 1/60 s. Checks drive the same input layer a player does and get the same answer every run.</p></div>
+          <div class="product-card"><h2 class="product-title">Honest limits</h2><p class="product-description">No touch controls or rebinding yet. Tested in Chromium; Firefox and Safari use only standard canvas and WebAudio APIs but haven't been verified. Built without an engine.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="footer-content"><div><p class="footer-brand-name">Vinícius Raposo</p><p class="footer-brand-title">I build the systems that work while you don&rsquo;t.</p><p class="footer-brand-tagline">AI reliability, systems engineering, and serious AI-assisted development.</p></div><nav class="footer-nav"><a href="../index.html">Home</a><a href="../projects.html">Projects</a><a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a><a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a></nav></div><p class="footer-copyright">&copy; 2026 Vinícius Raposo. All rights reserved.</p></footer>
+  </div>
+<script src="../main.js"></script></body>
+</html>

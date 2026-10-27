@@ -26,6 +26,7 @@
     '    <nav class="nav" aria-label="Primary">',
     '      <a href="' + rootPrefix + 'index.html" class="nav-link">Home</a>',
     '      <a href="' + rootPrefix + 'projects.html" class="nav-link">Projects</a>',
+    '      <a href="' + rootPrefix + 'index.html#games" class="nav-link">Games</a>',
     '      <a href="https://github.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
     '        GitHub',
     '        <svg class="nav-icon"><use href="' + rootPrefix + 'icons.svg#icon-github"></use></svg>',
@@ -72,6 +73,7 @@
     '    <nav class="footer-nav" aria-label="Footer">',
     '      <a href="' + rootPrefix + 'index.html">Home</a>',
     '      <a href="' + rootPrefix + 'projects.html">Projects</a>',
+    '      <a href="' + rootPrefix + 'index.html#games">Games</a>',
     '      <a href="https://www.upwork.com/freelancers/~01ca94c53d0d0101f3" target="_blank" rel="noopener">Upwork</a>',
     '      <a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a>',
     '      <a href="https://x.com/FishRaposo" target="_blank" rel="noopener">X</a>',
@@ -245,6 +247,13 @@
 
       applyFilter(filter);
     });
+
+    // projects.html#gamedev (or any tag) opens the catalog already filtered.
+    var hashFilter = window.location.hash.replace('#', '');
+    if (hashFilter) {
+      var preset = filterBar.querySelector('[data-filter="' + hashFilter + '"]');
+      if (preset) preset.click();
+    }
   }
 
   function injectFavicon() {

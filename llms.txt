@@ -33,6 +33,14 @@ These match the GitHub profile README pin order (2026-09-13).
 - **command-code-mods** — Command Code mods for planning, verified follow-through, gated memory, skill learning, on-demand protocols, and cache/error observability: nine standalone-installable TypeScript mods behind event contracts; self-repair is the sole completion judge. MIT licensed. — https://github.com/FishRaposo/command-code-mods
 - **personal-knowledge-base-os** — Local knowledge-base API with backlinks and citation-grounded chat. Supporting system implemented in Python + TypeScript: offline-first wikilinks/backlinks graph with dangling-link metadata, safe editing, hybrid/tag-scoped retrieval, citation-grounded chat, multi-vault isolation, incremental indexing, saved searches, live SSE events, and deterministic flashcards. Verified: 177 Python tests, 48 frontend Vitest tests, and 27 evidence tests. Offline defaults require no credentials or hosted infrastructure; PostgreSQL, Redis, Celery, OpenAI, Anthropic, watchdog, OCR, and heavy parser/model integrations remain optional. Manual visual/positioning QA is an owner handoff. — https://github.com/FishRaposo/personal-knowledge-base-os
 
+## Games
+
+Game projects, listed together for game-development roles.
+
+- **recall** — Browser arcade game in plain JavaScript (no engine, no asset files, synthesized sound): one throwing blade that returns; catching it after a hit raises the multiplier. Ships a task pack of four planted gameplay bugs and two feature requests, each with a brief (player, QA, design or producer voice), acceptance criteria (input sequence, expected visual outcome, verifiable game state), a reference solution and a headless Chromium check. Verified: 18 unit tests; every task check fails on its starting state and passes on its reference solution. MIT. — https://fishraposo.github.io/projects/recall.html — https://github.com/FishRaposo/recall
+- **material-progression** — NeoForge Minecraft mod (Java) rebuilding progression around geology, metallurgy and workshops; local 0.2.0 release candidate, not a public release. — https://fishraposo.github.io/projects/material-progression.html — https://github.com/FishRaposo/material-progression
+- **game-systems-sandbox** — Seeded Monte Carlo combat, loot, XP and economy balance simulators with an offline dashboard. — https://fishraposo.github.io/projects/game-systems-sandbox.html — https://github.com/FishRaposo/game-systems-sandbox
+
 ## Writing
 
 - **Taste Is All You Need** — long-form analysis of agent-harness economics: model intelligence is commoditizing; the scarce complement is engineering judgment encoded into the environment around the model. Published: https://x.com/FishRaposo/status/2080404528692924696
