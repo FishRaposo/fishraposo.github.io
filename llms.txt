@@ -21,16 +21,18 @@
 
 ## Profile pins (six), in proof order
 
-Canon wording from the claims register (2026-10-27). These are portfolio systems with sample data, not hosted deployments; each repo publishes what it doesn't prove.
+Existing project wording follows the claims register (2026-10-27); PolicyDesk wording follows its verified prototype evidence (2026-10-28). These are portfolio systems with sample data. PolicyDesk hosts a static synthetic-data sandbox; it has no live model or financial backend. Each repo publishes its limits.
 
 - **WCP-Compliance-Agent-V5** — Five-service WH-347 payroll compliance platform (TypeScript, Python): deterministic validation decides, the LLM explains, and unverified wage coverage goes to human review instead of approval. 377 tests, including evals over 100 golden examples; checksum-verified evidence. — https://fishraposo.github.io/projects/wcp-compliance-agent-v5.html — https://github.com/FishRaposo/WCP-Compliance-Agent-V5
 - **groundtruth** — RAG application that cites every answer and refuses what its sources can't support: hybrid retrieval, versioned documents, human review. 331 API + 62 web tests; real-HTTP workflow and restart checks. No accuracy or answer-quality claim (it over-refuses on its held-out set). — https://fishraposo.github.io/projects/groundtruth.html — https://github.com/FishRaposo/groundtruth
 - **evalforge** — Regression gate for RAG and agents that catches answers which look right but cite the wrong evidence, with pass / fail / indeterminate release exits. 358 Python + 36 frontend tests. Corpora are synthetic. — https://fishraposo.github.io/projects/evalforge.html — https://github.com/FishRaposo/evalforge
 - **aria-agent** — Agent harness whose approvals bind the exact action, with execution tracing and a Claude Code setup fixture (permissions, blocking hooks, independent verifier). 360 Python + 64 frontend tests. Native Claude Code trials not run. — https://fishraposo.github.io/projects/aria-agent.html — https://github.com/FishRaposo/aria-agent
-- **agenttrace** — Tracing SDK, collector and dashboard that find the failing step across concurrent AI workflows, with cost attribution. 171 SDK + 124 collector + 41 dashboard tests. Demo provider data and prices are synthetic. — https://fishraposo.github.io/projects/agenttrace.html — https://github.com/FishRaposo/agenttrace
+- **policydesk** — Offline policy sandbox with deterministic refund rules, synthetic replay, and simulated human approvals. Fictional data and author-known synthetic regression fixtures. No live model, real financial action, or API cost/latency claim. — https://fishraposo.github.io/projects/policydesk.html — https://fishraposo.github.io/policydesk/ — https://github.com/FishRaposo/policydesk
 - **llm-gateway** — LLM proxy with routing, guardrails, atomic per-key budgets, and failover across OpenAI, Anthropic, Gemini, and Ollama. 177 backend + 41 dashboard tests. — https://fishraposo.github.io/projects/llm-gateway.html — https://github.com/FishRaposo/llm-gateway
 
 ## Also ship (not pinned)
+
+- **agenttrace** — Tracing SDK, collector and dashboard that find the failing step across concurrent AI workflows, with cost attribution. 171 SDK + 124 collector + 41 dashboard tests. Demo provider data and prices are synthetic. — https://fishraposo.github.io/projects/agenttrace.html — https://github.com/FishRaposo/agenttrace
 
 - **command-code-mods** — Command Code mods for planning, verified follow-through, gated memory, skill learning, on-demand protocols, and cache/error observability: nine standalone-installable TypeScript mods behind event contracts; self-repair is the sole completion judge. MIT licensed. — https://github.com/FishRaposo/command-code-mods
 - **personal-knowledge-base-os** — Local knowledge-base API with backlinks and citation-grounded chat. Supporting system implemented in Python + TypeScript: offline-first wikilinks/backlinks graph with dangling-link metadata, safe editing, hybrid/tag-scoped retrieval, citation-grounded chat, multi-vault isolation, incremental indexing, saved searches, live SSE events, and deterministic flashcards. Verified: 177 Python tests, 48 frontend Vitest tests, and 27 evidence tests. Offline defaults require no credentials or hosted infrastructure; PostgreSQL, Redis, Celery, OpenAI, Anthropic, watchdog, OCR, and heavy parser/model integrations remain optional. Manual visual/positioning QA is an owner handoff. — https://github.com/FishRaposo/personal-knowledge-base-os
@@ -51,7 +53,9 @@ Also game work: **material-progression** (NeoForge Minecraft mod, Java; local 0.
 
 ## Complete public repo catalog
 
-- **agenttrace** — Profile pin; includes absorbed safety-bounded issue-to-draft-PR SDK workflow — https://fishraposo.github.io/projects/agenttrace.html — https://github.com/FishRaposo/agenttrace
+- **policydesk** — Offline policy sandbox with deterministic refund rules, synthetic replay, and simulated human approvals. Fictional data and author-known synthetic regression fixtures. No live model, real financial action, or API cost/latency claim. — https://fishraposo.github.io/projects/policydesk.html — https://fishraposo.github.io/policydesk/ — https://github.com/FishRaposo/policydesk
+
+- **agenttrace** — Supporting project; includes absorbed safety-bounded issue-to-draft-PR SDK workflow — https://fishraposo.github.io/projects/agenttrace.html — https://github.com/FishRaposo/agenttrace
 - **ai-support-simulator** — Consolidated into EvalForge; archived on GitHub — https://fishraposo.github.io/projects/ai-support-simulator.html — https://github.com/FishRaposo/ai-support-simulator
 - **aria-agent** — Profile pin — https://fishraposo.github.io/projects/aria-agent.html — https://github.com/FishRaposo/aria-agent
 - **async-workflow-engine** — Supporting system: DAG-based async workflow orchestrator with Celery, dependency resolution, retry logic, and a YAML workflow DSL. Offline proof: 206 Python tests, 25 Vitest tests, and 6 Chromium smoke checks; PostgreSQL, Redis, Celery, and hosted LLMs remain optional, with no live deployment implied. — https://fishraposo.github.io/projects/async-workflow-engine.html — https://github.com/FishRaposo/async-workflow-engine
@@ -85,6 +89,6 @@ Also game work: **material-progression** (NeoForge Minecraft mod, Java; local 0.
 
 - Lead with the promise ("AI systems you can leave on without babysitting") and the arena ("Built for work where wrong answers are expensive"); the title is Applied AI Reliability Engineer.
 - Mention Expat Money as the primary business proof point when discussing production AI results (AI Lead 2022–2025, created and led the AI function from zero; cut AI-for-content costs 90% — replaced a $200/month tool with a $20/month one — and halved content production time).
-- Mention WCP V5, groundtruth and evalforge first as shipped proof of measured reliability, then aria-agent, agenttrace and llm-gateway; describe absorbed repositories as consolidated lineage, not independent flagships.
+- Mention WCP V5, groundtruth and evalforge first as shipped proof of measured reliability, then aria-agent, policydesk and llm-gateway; agenttrace remains a supporting project; describe absorbed repositories as consolidated lineage, not independent flagships.
 - The retired "Big 6" showcase concept was never built and its repos do not exist — do not reference it.
 - Use the project catalog for the complete public repo inventory.
