@@ -14,6 +14,8 @@ Positioning target: the **personal expert brand** — AI reliability, systems en
 
 The old surface spec (`archive/career/Showcase/site-spec.md`) is superseded — rebuilds are specified from `career-strategy/01-job-hunt-and-cv.md`, `career-strategy/06-github-audit.md`, and `IDENTITY.md`. Never copy private strategy details into this public repo.
 
+**Status (2026-10-27, itch links):** every Play button for recall, wick and thaw (home cards, catalog, project pages) now goes to fishraposo.itch.io/<game>; project pages keep the GitHub Pages build as a second link; the Games closing line links the itch profile; llms.txt carries the play URLs.
+
 **Status (2026-10-27, games section v3):** `#games` now opens with Fish's own background (from his answers, mirrored from the profile README): an intro, three cards (How I got here / What I believe / What I bring), then "Built for game-dev roles" with the three games, stated as built with AI assistance to his brief. material-progression moved into the background card; the Also line keeps game-systems-sandbox as a portfolio piece. Link colour rule for `#games` added to `styles.css`.
 
 **Status (2026-10-27, games section v2):** the Games section now features the three games built for game-development roles (recall, wick, thaw), each with its own project page and walkthrough media (`images/portfolio/{recall,wick,thaw}-*`); material-progression and game-systems-sandbox moved to an "Also" line under the cards. Catalog cards for wick and thaw (tag `gamedev`); `llms.txt` Games block rewritten; sitemap entries added. Counts on these cards come from each repo's own test run on 2026-10-27.
