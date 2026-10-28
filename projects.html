@@ -17,7 +17,7 @@
   <meta property="og:description" content="Applied AI reliability — the complete public repo catalog. Highlighted shipped proof, supporting systems, archives, and study repos.">
   <meta property="og:url" content="https://fishraposo.github.io/projects.html">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Vinícius Raposo — I build the systems that work while you don't">
+  <meta property="og:site_name" content="Vinícius Raposo — AI systems you can leave on without babysitting">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Projects — Vinícius Raposo — Public Repo Catalog">
   <meta name="twitter:description" content="Every public repo, with shipped proof clearly separated from supporting systems, archives, and study projects.">
@@ -61,9 +61,9 @@
               <div class="project-meta"><span class="project-tag">Profile pin · TypeScript</span></div>
               <img class="project-card-thumb" src="images/portfolio/wcp-decision.png" alt="WCP rejected WH-347 with deterministic violations and LLM explanation">
               <h2 class="project-title">WCP-Compliance-Agent-V5</h2>
-              <p class="project-thesis">Deterministic validation decides; the LLM explains.</p>
-              <p class="project-subtitle">Production-ready WH-347 compliance platform: deterministic validation decides, the LLM explains, and every decision is traceable.</p>
-              <p class="project-description">Offline-first shipped proof across five service contracts: 42 Contracts, 66 Agent, 45 Gateway, and 29 Web tests; 185 Compliance Core tests; checksum-verified evidence; desktop and mobile browser smoke.</p>
+              <p class="project-thesis">Checks decide; the LLM explains.</p>
+              <p class="project-subtitle">Five-service WH-347 payroll compliance platform: deterministic validation decides, the LLM explains, and unverified wage coverage goes to human review instead of approval.</p>
+              <p class="project-description">377 tests, including evals over 100 golden examples: Contracts 42, Agent 70, Gateway 45, Web 30, Compliance Core 89 unit + 101 eval, plus four tooling checks; checksum-verified evidence. A portfolio system with sample data, not a hosted deployment.</p>
               <ul class="project-highlights">
                 <li>Updated: 2026-08-15</li>
                 <li>Language: TypeScript</li>
@@ -77,9 +77,9 @@
               <div class="project-meta"><span class="project-tag">Profile pin · Python</span></div>
               <img class="project-card-thumb" src="images/portfolio/gt-cited.png" alt="GroundTruth cited answer view">
               <h2 class="project-title">groundtruth</h2>
-              <p class="project-thesis">Answers come from the corpus, or the system refuses.</p>
-              <p class="project-subtitle">Canonical production RAG platform: hybrid search, citations, refusal logic.</p>
-              <p class="project-description">Offline-first demo with hybrid search, citations, and refusal logic. Verified proof: 291 API tests, 47 web tests, 8/8 Chromium smoke, checksum-verified offline evidence. PostgreSQL/pgvector, Redis, model-provider, and document-parser infrastructure are optional integration paths, not a hosted production deployment. Absorbs document-intelligence-pipeline ingestion and KnowledgeOps retrieval/deployment lineage.</p>
+              <p class="project-thesis">It cites, or it refuses.</p>
+              <p class="project-subtitle">RAG application that cites every answer and refuses what its sources can't support: hybrid retrieval, versioned documents, human review.</p>
+              <p class="project-description">331 API + 62 web tests; real-HTTP workflow and restart checks. It refuses more than it should on its held-out set, and the repo says so: no accuracy claim is made. PostgreSQL/pgvector, Redis and model providers are optional integration paths, not a hosted deployment.</p>
               <ul class="project-highlights">
                 <li>Updated: 2026-08-15</li>
                 <li>Language: Python</li>
@@ -88,30 +88,14 @@
               <a href="https://github.com/FishRaposo/groundtruth" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-          <article class="project-card project-card-featured" data-tags="pinned agents agentic api shipped">
-            <div class="project-card-inner">
-              <div class="project-meta"><span class="project-tag">Profile pin · Python</span></div>
-              <img class="project-card-thumb" src="images/portfolio/aria-blocked.png" alt="ARIA prompt injection blocked by safety checks">
-              <h2 class="project-title">aria-agent</h2>
-              <p class="project-thesis">The harness bounds the model; skills disclose only when activated.</p>
-              <p class="project-subtitle">Canonical clean-break agent harness: approval gates, execution tracing, and progressive-disclosure Agent Skills.</p>
-              <p class="project-description">Offline-first Python harness with bounded multi-hop execution, deterministic safety checks, replay, local memory, SSE, and checksum-verified evidence. Verified proof: 200 Python tests, 12 focused Agent Skills tests, Ruff and Pyright checks, and 31 frontend tests. The absorbed mini-agent lineage remains documented; hosted workflows and provider infrastructure stay deferred.</p>
-              <ul class="project-highlights">
-                <li>Updated: 2026-08-15</li>
-                <li>Language: Python</li>
-              </ul>
-              <a href="projects/aria-agent.html" class="project-link">Project page</a>
-              <a href="https://github.com/FishRaposo/aria-agent" class="project-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
           <article class="project-card project-card-featured" data-tags="pinned evaluation rag agentic ci shipped">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Profile pin · Python</span></div>
               <img class="project-card-thumb" src="images/portfolio/eval-case.png" alt="EvalForge failed retrieval case with judge scores">
               <h2 class="project-title">evalforge</h2>
-              <p class="project-thesis">Quality drift is caught before it ships.</p>
-              <p class="project-subtitle">Regression testing for RAG and agentic AI.</p>
-              <p class="project-description">Regression testing for RAG and agentic AI: retrieval and conversational evaluations.</p>
+              <p class="project-thesis">It tells you what broke.</p>
+              <p class="project-subtitle">Regression gate for RAG and agents that catches answers which look right but cite the wrong evidence, with pass / fail / indeterminate release exits.</p>
+              <p class="project-description">358 Python + 36 frontend tests. The bundled corpora are synthetic sample data, not human-validated.</p>
               <ul class="project-highlights">
                 <li>Updated: 2026-08-13</li>
                 <li>Language: Python</li>
@@ -120,14 +104,30 @@
               <a href="https://github.com/FishRaposo/evalforge" class="project-link" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
+          <article class="project-card project-card-featured" data-tags="pinned agents agentic api shipped">
+            <div class="project-card-inner">
+              <div class="project-meta"><span class="project-tag">Profile pin · Python</span></div>
+              <img class="project-card-thumb" src="images/portfolio/aria-blocked.png" alt="ARIA prompt injection blocked by safety checks">
+              <h2 class="project-title">aria-agent</h2>
+              <p class="project-thesis">It stops itself.</p>
+              <p class="project-subtitle">Agent harness whose approvals bind the exact action, with execution tracing and a Claude Code setup fixture (permissions, blocking hooks, independent verifier).</p>
+              <p class="project-description">360 Python + 64 frontend tests. Native Claude Code trials have not been run, so no result is claimed for them.</p>
+              <ul class="project-highlights">
+                <li>Updated: 2026-08-15</li>
+                <li>Language: Python</li>
+              </ul>
+              <a href="projects/aria-agent.html" class="project-link">Project page</a>
+              <a href="https://github.com/FishRaposo/aria-agent" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
           <article class="project-card project-card-featured" data-tags="pinned observability agents llm cost-control shipped">
             <div class="project-card-inner">
               <div class="project-meta"><span class="project-tag">Profile pin · Python</span></div>
               <img class="project-card-thumb" src="images/portfolio/trace-replay.png" alt="AgentTrace deterministic replay of a recorded run">
               <h2 class="project-title">agenttrace</h2>
-              <p class="project-thesis">A run can be inspected after the fact.</p>
-              <p class="project-subtitle">Agent observability and replay SDK with cost attribution and prompt-cost reporting.</p>
-              <p class="project-description">Agent observability and replay SDK with cost attribution and prompt-cost reporting. Its dependency-free SDK now includes the absorbed safety-bounded issue-to-draft-PR workflow: deterministic planning, sandboxed edits, bounded tests, approval pause, and draft-only offline intent.</p>
+              <p class="project-thesis">It finds the failing step.</p>
+              <p class="project-subtitle">Tracing SDK, collector and dashboard that find the failing step across concurrent AI workflows, with cost attribution.</p>
+              <p class="project-description">171 SDK + 124 collector + 41 dashboard tests. Provider answers, usage and prices in the demo are synthetic.</p>
               <ul class="project-highlights">
                 <li>Updated: 2026-08-16</li>
                 <li>Language: Python</li>
@@ -141,9 +141,9 @@
               <div class="project-meta"><span class="project-tag">Profile pin · TypeScript</span></div>
               <img class="project-card-thumb" src="images/portfolio/gw-simulate.png" alt="LLM Gateway audit log after simulated fallback and guardrail stops">
               <h2 class="project-title">llm-gateway</h2>
-              <p class="project-thesis">The proxy is the control point.</p>
-              <p class="project-subtitle">LLM proxy with routing, guardrails, cost control, and fallback.</p>
-              <p class="project-description">Routes requests across OpenAI, Anthropic, Gemini, and Ollama behind an OpenAI-compatible API, with automatic failover, response caching, and per-API-key budget enforcement.</p>
+              <p class="project-thesis">One control point for spend and failover.</p>
+              <p class="project-subtitle">LLM proxy with routing, guardrails, atomic per-key budgets, and failover across OpenAI, Anthropic, Gemini, and Ollama.</p>
+              <p class="project-description">177 backend + 41 dashboard tests. Benchmark timings are single-process, not throughput figures.</p>
               <ul class="project-highlights">
                 <li>Updated: 2026-06-16</li>
                 <li>Language: TypeScript</li>
@@ -157,7 +157,7 @@
               <div class="project-meta"><span class="project-tag">Also ship · TypeScript</span></div>
               <h2 class="project-title">command-code-mods</h2>
               <p class="project-subtitle">Command Code mods for planning, verified follow-through, gated memory, and skill learning.</p>
-              <p class="project-description">Seven standalone-installable TypeScript mods compose one workflow with a single referee — self-repair is the only completion judge, autopilot acts only on verified verdicts, and every autonomous move lands in a receipts log.</p>
+              <p class="project-description">Nine standalone-installable TypeScript mods compose one workflow with a single referee — self-repair is the only completion judge, autopilot acts only on verified verdicts, and every autonomous move lands in a receipts log.</p>
               <ul class="project-highlights">
                 <li>Updated: 2026-08-23</li>
                 <li>Language: TypeScript</li>

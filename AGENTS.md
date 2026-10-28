@@ -10,9 +10,11 @@ The live portfolio at fishraposo.github.io. Projects are shown **build in public
 
 This site is the "polished proof" layer of the public surfaces. Era note (2026-08-11): the old canon hierarchy is retired — the working pair is the hub's `IDENTITY.md` (identity keystone) + `career-strategy/` (operating layer); the old `career/` canon is archived at `archive/career/`.
 
-Positioning target: the **personal expert brand** — AI reliability, systems engineering, and serious AI-assisted development. Identity constants per `IDENTITY.md`: operator statement "I build the systems that work while you don't", the applied-AI-reliability field, and the Expat Money anchor as shipped, cited proof. The three-domain thesis line is personal-worldview context, not a professional surface lead.
+Positioning target (2026-10-27, the hub's POSITIONING v9 and CLAIMS v7, mirrored from the profile README): the **promise** "AI systems you can leave on without babysitting", the **arena** "Built for work where wrong answers are expensive", the title **Applied AI Reliability Engineer**, then the two offers in plain words (coding agents you can let run; AI-built apps made to hold up in production), then the proof in measured-reliability order (WCP V5, groundtruth, evalforge, aria-agent, agenttrace, llm-gateway) in canon wording with a scope line. The retired operator statement "I build the systems that work while you don't" must not appear anywhere on the site. Test counts and proof lines come only from the claims register; never round, combine or add an accuracy figure.
 
 The old surface spec (`archive/career/Showcase/site-spec.md`) is superseded — rebuilds are specified from `career-strategy/01-job-hunt-and-cv.md`, `career-strategy/06-github-audit.md`, and `IDENTITY.md`. Never copy private strategy details into this public repo.
+
+**Status (2026-10-27, positioning v9):** site re-based on the new anchor. Every header/footer (static and injected by `main.js`) now reads "Applied AI Reliability Engineer" / "AI systems you can leave on without babysitting." / "Built for work where wrong answers are expensive."; meta, OG, Twitter and JSON-LD follow. Home: hero (promise, arena, method, 377-test stat), new "What I help with" (Door 2 then Door 1, then RAG/agents), "Proof" with all six systems in canon order and canon lines/counts (377; 331 + 62; 358 + 36; 360 + 64; 171 + 124 + 41; 177 + 41) plus the scope line; "What this proves" renamed "Why it holds up", its first card now carries both past roles. Catalog: the six cards reordered and re-based, each with its honest limit; command-code-mods says nine mods. Project pages for the six: canon subtitle, meta and evidence lines (retired counts, "production-ready" and "8/8 smoke" removed), WCP chart re-based to 42/70/45/30/190. `llms.txt` canon and pins rewritten; `og-image.png` regenerated with the new line and six chips.
 
 **Status (2026-10-27, itch links):** every Play button for recall, wick and thaw (home cards, catalog, project pages) now goes to fishraposo.itch.io/<game>; project pages keep the GitHub Pages build as a second link; the Games closing line links the itch profile; llms.txt carries the play URLs.
 
@@ -61,7 +63,7 @@ Push to `main` → GitHub Actions (`.github/workflows/deploy.yml`) uploads the e
 
 ## Page structure
 
-- `index.html` — Hero with lead + thesis + proof highlights + CTAs, open source repo cards, selected projects
+- `index.html` — Hero (promise, arena, method), what I help with, the six proof systems, why it holds up, Games, writing, find me
 - `projects.html` — Complete public repo catalog with tag filter
 - `projects/*.html` — One static detail page per public GitHub repo
 - `llms.txt` — LLM-readable manifest of the site

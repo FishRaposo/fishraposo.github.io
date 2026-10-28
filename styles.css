@@ -1,4 +1,4 @@
-/* Vinícius Raposo — systems that work while you don't Styles */
+/* Vinícius Raposo — AI systems you can leave on without babysitting Styles */
 
 :root {
   /* ── Palette (OKLCH-calibrated) ── */
@@ -1483,4 +1483,6 @@ h2 {
 .project-thesis { font-size: 14px; font-weight: 500; color: var(--color-accent-light); margin: 8px 0 12px; }/* Games section: three cards fill the row; anchored sections clear the sticky header */
 .products-grid-games { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 section[id] { scroll-margin-top: 190px; }
-#games .proof-card-desc a, #games .section-description a { color: #fb923c; text-decoration: underline; text-underline-offset: 2px; }
+#games .proof-card-desc a, #games .section-description a,
+#help .section-description a, #proof-systems .section-description a { color: #fb923c; text-decoration: underline; text-underline-offset: 2px; }
+.hero-hero .hero-now { max-width: 760px; margin-left: auto; margin-right: auto; }

@@ -1,8 +1,8 @@
-# Vinícius Raposo — I build the systems that work while you don't
+# Vinícius Raposo — AI systems you can leave on without babysitting
 
-> I build the systems that work while you don't.
-> Applied AI reliability — production RAG, agents, evaluation, deterministic scaffolding.
-> This isn't cost arbitrage. It's engineering arbitrage.
+> AI systems you can leave on without babysitting.
+> Built for work where wrong answers are expensive.
+> Applied AI Reliability Engineer.
 
 Personal portfolio site hosted on GitHub Pages. Static HTML/CSS/JS — no build step, no framework, no dependencies.
 
@@ -10,7 +10,7 @@ Personal portfolio site hosted on GitHub Pages. Static HTML/CSS/JS — no build 
 
 ## Pages
 
-- `index.html` — Hero with lead + thesis + proof highlights + CTAs, open source repo cards, selected projects
+- `index.html` — Hero (promise, arena, method), what I help with, the six proof systems in canon order, why it holds up, Games, writing, contact
 - `projects.html` — Complete public repo catalog with tag filter
 - `projects/*.html` — One static detail page per public GitHub repo
 - `llms.txt` — LLM-readable manifest of the site

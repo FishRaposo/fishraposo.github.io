@@ -1,4 +1,4 @@
-/* Vinícius Raposo — systems that work while you don't
+/* Vinícius Raposo — AI systems you can leave on without babysitting
  * Main JavaScript file
  */
 
@@ -15,8 +15,8 @@
     '  <div class="header-content">',
     '    <a href="' + rootPrefix + 'index.html" class="brand">',
     '      <p class="brand-name">Vinícius Raposo</p>',
-    '      <p class="brand-title">AI reliability, systems engineering, and serious AI-assisted development.</p>',
-    '      <p class="brand-tagline">I build the systems that work while you don&rsquo;t.</p>',
+    '      <p class="brand-title">Applied AI Reliability Engineer</p>',
+    '      <p class="brand-tagline">AI systems you can leave on without babysitting.</p>',
     '    </a>',
     '    <button class="btn-hamburger" aria-label="Toggle navigation" aria-expanded="false">',
     '      <span class="hamburger-line"></span>',
@@ -67,8 +67,8 @@
     '  <div class="footer-content">',
     '    <div>',
     '      <p class="footer-brand-name">Vinícius Raposo</p>',
-    '      <p class="footer-brand-title">I build the systems that work while you don&rsquo;t.</p>',
-    '      <p class="footer-brand-tagline">AI reliability, systems engineering, and serious AI-assisted development.</p>',
+    '      <p class="footer-brand-title">AI systems you can leave on without babysitting.</p>',
+    '      <p class="footer-brand-tagline">Built for work where wrong answers are expensive.</p>',
     '    </div>',
     '    <nav class="footer-nav" aria-label="Footer">',
     '      <a href="' + rootPrefix + 'index.html">Home</a>',
