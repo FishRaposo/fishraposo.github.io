@@ -13,6 +13,7 @@ Personal portfolio site hosted on GitHub Pages. Static HTML/CSS/JS — no build 
 - `index.html` — Hero (promise, arena, method), what I help with, the six proof systems in canon order, why it holds up, Games, writing, contact
 - `projects.html` — Complete public repo catalog with tag filter
 - `projects/*.html` — One static detail page per public GitHub repo
+- `fish.html` and `fish.md` — Profile for people and AI agents; Markdown is the canonical text
 - `llms.txt` — LLM-readable manifest of the site
 
 ## Quick Start

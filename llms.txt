@@ -1,5 +1,7 @@
 # Vinícius Raposo / FishRaposo — LLM-readable manifest
 
+Profile for people and AI agents: https://fishraposo.github.io/fish.html · Canonical Markdown: https://fishraposo.github.io/fish.md
+
 ## Canon
 
 - **Promise (lead line):** AI systems you can leave on without babysitting.

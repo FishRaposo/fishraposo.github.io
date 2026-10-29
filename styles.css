@@ -1486,3 +1486,12 @@ section[id] { scroll-margin-top: 190px; }
 #games .proof-card-desc a, #games .section-description a,
 #help .section-description a, #proof-systems .section-description a { color: #fb923c; text-decoration: underline; text-underline-offset: 2px; }
 .hero-hero .hero-now { max-width: 760px; margin-left: auto; margin-right: auto; }
+
+/* Agent-readable profile */
+.fish-profile { max-width: 780px; margin: 0 auto; padding: 3rem 1.5rem 5rem; color: var(--color-text-primary); line-height: 1.75; }
+.fish-profile h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.15; margin: 2rem 0 1rem; }
+.fish-profile h2 { font-size: 1.45rem; margin: 2.5rem 0 0.75rem; }
+.fish-profile p, .fish-profile li { margin: 0 0 1rem; }
+.fish-profile ul { padding-left: 1.5rem; }
+.fish-profile a { color: var(--color-accent-lighter); overflow-wrap: anywhere; }
+.fish-profile a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }

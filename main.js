@@ -26,6 +26,7 @@
     '    <nav class="nav" aria-label="Primary">',
     '      <a href="' + rootPrefix + 'index.html" class="nav-link">Home</a>',
     '      <a href="' + rootPrefix + 'projects.html" class="nav-link">Projects</a>',
+    '      <a href="' + rootPrefix + 'fish.html" class="nav-link">About</a>',
     '      <a href="' + rootPrefix + 'index.html#games" class="nav-link">Games</a>',
     '      <a href="https://github.com/FishRaposo" class="nav-link" target="_blank" rel="noopener">',
     '        GitHub',
@@ -73,6 +74,7 @@
     '    <nav class="footer-nav" aria-label="Footer">',
     '      <a href="' + rootPrefix + 'index.html">Home</a>',
     '      <a href="' + rootPrefix + 'projects.html">Projects</a>',
+    '      <a href="' + rootPrefix + 'fish.html">About</a>',
     '      <a href="' + rootPrefix + 'index.html#games">Games</a>',
     '      <a href="https://www.upwork.com/freelancers/~01ca94c53d0d0101f3" target="_blank" rel="noopener">Upwork</a>',
     '      <a href="https://github.com/FishRaposo" target="_blank" rel="noopener">GitHub</a>',
@@ -144,13 +146,15 @@
     var ctaButton = main.getAttribute('data-cta-button') || '';
     var ctaUrl = main.getAttribute('data-cta-url') || 'https://github.com/FishRaposo';
 
-    var ctaWrap = document.createElement('div');
-    ctaWrap.innerHTML = ctaHTML
-      .replace('{{title}}', ctaTitle)
-      .replace('{{subtitle}}', ctaSubtitle)
-      .replace('{{button}}', ctaButton)
-      .replace('{{url}}', ctaUrl);
-    container.insertBefore(ctaWrap.firstElementChild, null);
+    if (ctaTitle && ctaButton) {
+      var ctaWrap = document.createElement('div');
+      ctaWrap.innerHTML = ctaHTML
+        .replace('{{title}}', ctaTitle)
+        .replace('{{subtitle}}', ctaSubtitle)
+        .replace('{{button}}', ctaButton)
+        .replace('{{url}}', ctaUrl);
+      container.insertBefore(ctaWrap.firstElementChild, null);
+    }
 
     // Inject footer at end
     var footerWrap = document.createElement('div');
