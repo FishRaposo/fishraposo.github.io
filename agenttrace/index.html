@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentTrace — find the failing step when requests overlap</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #0d1117; color: #d7dde5;
+         font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 56px 24px 72px; }
+  h1 { font-size: 31px; line-height: 1.18; margin: 0 0 10px; letter-spacing: -0.01em; color: #f0f6fc; }
+  h2 { font-size: 19px; margin: 46px 0 8px; color: #f0f6fc; }
+  p { margin: 0 0 14px; }
+  .lede { color: #aab6c4; font-size: 17px; }
+  .mode { display: inline-block; font: 600 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+          letter-spacing: .06em; padding: 5px 8px; border-radius: 4px; margin-bottom: 10px; }
+  .connected { color: #86efac; background: #0f2d1a; border: 1px solid #1e5f38; }
+  .sample { color: #fcd34d; background: #3a2c0a; border: 1px solid #6b5313; }
+  figure { margin: 0 0 12px; }
+  figure img { width: 100%; height: auto; border: 1px solid #21262d; border-radius: 8px; display: block; }
+  figcaption { color: #8b949e; font-size: 14px; margin-top: 10px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .split div { border: 1px solid #21262d; border-radius: 8px; padding: 14px 16px; background: #11161d; }
+  .split h3 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: #8b949e; }
+  .split ul { margin: 0; padding-left: 16px; font-size: 14px; }
+  .a { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .a a { border: 1px solid #30363d; border-radius: 6px; padding: 9px 14px; color: #d7dde5; text-decoration: none; }
+  .a a.primary { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+  footer { margin-top: 46px; border-top: 1px solid #21262d; padding-top: 14px; color: #8b949e; font-size: 13px; }
+  code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; color: #93c5fd; }
+  @media (max-width: 640px) { .split { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Find the failing step, even when requests overlap</h1>
+  <p class="lede">AgentTrace is a tracing SDK, a local collector and a dashboard: twenty overlapping
+    requests, one retrieval failure, and the repair beside it. The point is not a pretty chart — it is
+    naming the step that broke, and what it cost, when the logs interleave.</p>
+
+  <h2>The failing step, named</h2>
+  <span class="mode connected">CONNECTED LOCAL COLLECTOR · REAL CONCURRENCY, EXPORT AND PERSISTENCE</span>
+  <figure>
+    <img src="images/connected-detail-1440.png" alt="AgentTrace run detail showing a failed retrieve span with its error and duration">
+    <figcaption>A failed run resolved to one span: <code>retrieve</code>, status error, 3.6 ms, attempt 1 —
+      <em>“Knowledge index version mismatch; no matching source.”</em> The timeline places it in
+      context: request → retrieval → provider → validation, with the correlation id carried through.</figcaption>
+  </figure>
+
+  <h2>Failed run and its repair, side by side</h2>
+  <span class="mode sample">SAMPLE DATA · BUNDLED RESPONSES</span>
+  <figure>
+    <img src="images/sample-comparison-1440.png" alt="AgentTrace comparison view showing a failed run beside its repair">
+    <figcaption>The comparison view keeps the timeout and the cancellation visible next to the repair, so a
+      fix is not mistaken for a clean run: the failure that prompted it stays on the screen.</figcaption>
+  </figure>
+
+  <h2>Twenty requests in flight</h2>
+  <span class="mode sample">SAMPLE DATA · BUNDLED RESPONSES</span>
+  <figure>
+    <img src="images/sample-overview-1440.png" alt="AgentTrace overview of many overlapping requests with their outcomes">
+    <figcaption>Overlapping requests in one view — which is where tracing earns its keep, because serial
+      logs make interleaved failures unreadable.</figcaption>
+  </figure>
+
+  <h2>What is real, and what is not</h2>
+  <div class="split">
+    <div>
+      <h3>Real</h3>
+      <ul>
+        <li>concurrency, HTTP export and persistence</li>
+        <li>span capture, correlation ids, playback of recorded traces</li>
+        <li>the collector, SDK and dashboard code</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Synthetic</h3>
+      <ul>
+        <li>bundled provider responses</li>
+        <li>token prices, marked <em>illustrative</em> in the UI</li>
+        <li>no provider account is called by the demo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="a">
+    <a class="primary" href="https://github.com/FishRaposo/agenttrace">Source repository</a>
+    <a href="https://github.com/FishRaposo/agenttrace/blob/main/docs/portfolio-case-study.md">Case study</a>
+    <a href="https://github.com/FishRaposo/agenttrace/blob/main/dashboard/public/evidence/portfolio-handoff.md">Evidence handoff</a>
+  </div>
+
+  <footer>
+    Captures come from the repository's recorded runs. The first is connected local collector mode; the
+    other two use sample data with bundled responses. The dashboard is not publicly served — this page
+    shows its recorded state rather than a live link, and the split above says which parts are synthetic.
+  </footer>
+</main>
+</body>
+</html>
