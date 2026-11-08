@@ -49,8 +49,9 @@
   <h2>What produced it</h2>
   <pre>pip install -e .
 evalforge eval example_suites/rag_basic.yaml -b mock -f html -o reports</pre>
-  <p>The backend is deterministic and offline: no provider key, no network. The suite is the one the repo
-    pins by hash — <code>b707e5b1…</code> — so the same input produces the same report.</p>
+  <p>The backend is deterministic and offline: no provider key, no network. The suite file hashes to
+    <code>c02cc63b…</code> and has not changed since the repository's initial commit, so the same input
+    produces the same report. (<code>b707e5b1…</code> is the portfolio evidence bundle, a different artifact.)</p>
 
   <h2>The case that failed</h2>
   <table>
