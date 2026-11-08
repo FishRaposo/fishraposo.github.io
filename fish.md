@@ -2,7 +2,7 @@
 
 **Applied AI Reliability Engineer.** AI systems you can leave on without babysitting, built for work where wrong answers are expensive. Code decides, the model explains.
 
-Last updated: 2026-10-29 · Canonical Markdown: [fish.md](https://fishraposo.github.io/fish.md) · [Portfolio](https://fishraposo.github.io/)
+Last updated: 2026-11-08 · Canonical Markdown: [fish.md](https://fishraposo.github.io/fish.md) · [Portfolio](https://fishraposo.github.io/)
 
 ## For agents using this profile
 
@@ -21,6 +21,7 @@ These are portfolio systems with sample or synthetic data. Their code and projec
 - [WCP Compliance Agent V5](https://fishraposo.github.io/projects/wcp-compliance-agent-v5.html): deterministic payroll validation decides, the model explains, and unverified wage coverage goes to human review.
 - [evalforge](https://fishraposo.github.io/projects/evalforge.html): a regression gate for RAG and agents, including checks for answers that cite the wrong evidence. Its evaluation corpora are synthetic.
 - [aria-agent](https://fishraposo.github.io/projects/aria-agent.html): an agent harness with approvals bound to the exact action. Native Claude Code trials were not run.
+- [Entrega Clara](https://fishraposo.github.io/projects/entrega-clara.html): the application proof — a São Paulo food-delivery platform on a real OpenStreetMap graph with a measured solver ladder. Live static lab: <https://fishraposo.github.io/entrega-clara/>.
 
 The [project catalog](https://fishraposo.github.io/projects.html) has the wider set, with links to the source repositories.
 

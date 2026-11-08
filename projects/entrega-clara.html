@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>entrega-clara — Vinícius Raposo</title>
-  <meta name="description" content="Entrega Clara: a Brazil-first food-delivery platform scaffold — deterministic FastAPI demo replayable from placed to rated, role-based web surfaces, and a solver-independent routing baseline.">
+  <meta name="description" content="Entrega Clara: a São Paulo food-delivery platform on a real OpenStreetMap graph, with a measured solver ladder, precedence-aware batching, and a live static lab.">
   <meta name="author" content="Vinícius Raposo">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,27 +18,48 @@
   <div class="bg-grid"></div>
   <div class="container">
     <header class="header"><div class="header-content"><a href="../index.html" class="brand"><p class="brand-name">Vinícius Raposo</p><p class="brand-title">Applied AI Reliability Engineer</p><p class="brand-tagline">AI systems you can leave on without babysitting.</p></a><nav class="nav"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="https://github.com/FishRaposo/entrega-clara" class="nav-link" target="_blank" rel="noopener">GitHub</a></nav></div></header>
-    <main id="main-content" data-cta-title="View the source" data-cta-subtitle="This page summarizes the public GitHub repository. The repo remains the source of truth for code, tests, and implementation details." data-cta-button="Open on GitHub" data-cta-url="https://github.com/FishRaposo/entrega-clara">
+    <main id="main-content" data-cta-title="See the route run" data-cta-subtitle="The static lab replays the committed search traces in the browser. No install, no backend, no keys." data-cta-button="Open the live lab" data-cta-url="https://fishraposo.github.io/entrega-clara/">
       <section class="page-hero">
-        <div class="badge">Active build · Python + TypeScript</div>
+        <div class="badge">Application proof · Python + TypeScript</div>
         <h1 class="page-title"><span class="gradient-text">entrega-clara</span></h1>
-        <p class="page-subtitle">Brazil-first food-delivery platform: the customer-to-delivery operation made visible, measurable, and replaceable.</p>
-        <p class="page-description">A production-shaped scaffold whose implemented demo story is a lunch-rush scenario: a seeded order replays atomically from <em>placed</em> through <em>rated</em> &mdash; restaurant preparation, courier state and location updates, notifications, and a deterministic clock &mdash; while the web Demo Mode inspects, advances, and resets the running API scenario. Role-based surfaces cover Customer, Restaurant, Courier, and Admin, and routing sits behind a solver-independent baseline. Brazil is the default market (pt-BR, BRL, PIX, LGPD-aware privacy copy) with locale, currency, payments, and legal copy configuration-driven for future markets.</p>
+        <p class="page-subtitle">Pathfinding on real São Paulo streets, inside a food-delivery platform.</p>
+        <p class="page-description">A customer-to-delivery lifecycle on a real OpenStreetMap graph: time-dependent routing, precedence-aware batching, SSE tracking, an optional PostgreSQL adapter with a transactional outbox, and a solver ladder measured on a 105k-node city graph. The static lab replays the committed traces in the browser, so a reviewer can watch the search without installing anything.</p>
         <div class="hero-bins" style="justify-content: center;">
-          <span class="bin-tag">Language: Python (FastAPI) + TypeScript web</span>
-          <span class="bin-tag">Status: active scaffold &mdash; checkout and production integrations deferred</span>
-          <span class="bin-tag">Visibility: public</span>
+          <span class="bin-tag">Language: Python (FastAPI) + TypeScript</span>
+          <span class="bin-tag">Status: v0.1.0 · application proof</span>
+          <span class="bin-tag">Live lab: static replay</span>
         </div>
         <div class="hero-actions" style="justify-content: center;">
-          <a href="https://github.com/FishRaposo/entrega-clara" class="btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://fishraposo.github.io/entrega-clara/" class="btn-primary" target="_blank" rel="noopener">Open the live lab</a>
+          <a href="https://github.com/FishRaposo/entrega-clara" class="btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
           <a href="../projects.html" class="btn-secondary">Back to catalog</a>
         </div>
       </section>
+
       <section class="section section--tight">
+        <div class="section-header"><div><h2>What it proves</h2><p class="section-description">Conventional engineering with a measured core: domain modelling, transactions, algorithms and trade-offs.</p></div></div>
         <div class="products-grid products-grid-code">
-          <div class="product-card product-card--featured"><h2 class="product-title">Why it matters</h2><p class="product-description">The portfolio thesis is operational transparency: the customer-to-delivery pipeline is modeled as a measurable, replayable system rather than a black box &mdash; with a routing baseline a future solver can replace without touching the domain state machine. Money is integer minor units plus currency; time is stored canonically and rendered in the active market time zone.</p></div>
-          <div class="product-card"><h2 class="product-title">Deterministic by design</h2><p class="product-description">Seed data and demo scenarios are deterministic and replayable; <code>make check</code> runs the full gate set (lint, typecheck, tests) and <code>make demo-preview</code> previews the offline seed without contacting the API. Docs carry the architecture, ADRs, requirements, and runbooks alongside the code.</p></div>
-          <div class="product-card"><h2 class="product-title">Repo facts</h2><p class="product-description">Public since 2026-08-30. Honest status: this is not a production payment platform, logistics company, or identity provider &mdash; payments, roles, GPS updates, and notifications are seeded or simulated, and customer checkout, operational role workflows, and production integrations remain explicitly deferred scaffold scope.</p></div>
+          <div class="product-card product-card--featured"><h2 class="product-title">A real graph, not a toy fixture</h2><p class="product-description">The product and lab run on a 2,405-node central São Paulo OSM extract, filtered to its largest strongly connected component. The city benchmark uses a 104,991-node graph. Distances, ETAs and solver results come from the committed street data, not a synthetic lattice.</p></div>
+          <div class="product-card"><h2 class="product-title">A measured solver ladder</h2><p class="product-description">Dijkstra → A* → ALT landmarks → bidirectional → weighted ε-A*, plus contraction hierarchies. On 200 sampled city pairs: Dijkstra 53,885 expansions (51.3%) / 172 ms; CH 85 (0.1%) / 2.8 ms after a 2.7 s build. Break-even is 12 queries against A*.</p><a href="https://github.com/FishRaposo/entrega-clara/blob/main/docs/benchmarks/routing-city.md" class="project-link">City benchmark</a></div>
+          <div class="product-card"><h2 class="product-title">Batching that respects precedence</h2><p class="product-description">Held-Karp with pickup-before-dropoff precedence, capacity and promised windows, plus dynamic re-insertion of a new order into an active batch. The 7-stop city batch costs ~2.7 s to price and saves 6,584 s of driving time (38%) over the baseline.</p><a href="https://github.com/FishRaposo/entrega-clara/blob/main/docs/verification.md" class="project-link">Verification record</a></div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section-header"><div><h2>The three captures</h2><p class="section-description">1000×750 cards, each with its own limit in the footer. Sources, crop arithmetic and re-run commands: <a href="https://github.com/FishRaposo/entrega-clara/blob/main/docs/images/portfolio/README.md">docs/images/portfolio</a>.</p></div></div>
+        <div class="products-grid products-grid-code">
+          <div class="product-card"><img class="project-card-thumb" src="../images/portfolio/entre-01-cover.png" alt="Cover card: customer tracking on the real São Paulo graph"><p class="project-description">Cover — the product surface and the current test counts.</p></div>
+          <div class="product-card"><img class="project-card-thumb" src="../images/portfolio/entre-02-evidence.png" alt="Evidence card: the measured city solver ladder"><p class="project-description">Evidence — 53,885 → 85 expansions, 172 → 2.8 ms, break-even 12 queries.</p></div>
+          <div class="product-card"><img class="project-card-thumb" src="../images/portfolio/entre-03-lab.png" alt="Lab card: the static search replay"><p class="project-description">Instrument — the static lab replaying ALT 70 vs Dijkstra 167.</p></div>
+        </div>
+      </section>
+
+      <section class="section proof-section">
+        <h2>What it does not prove</h2>
+        <div class="proof-grid">
+          <div class="proof-card"><h3 class="proof-card-title">Simulated operations</h3><p class="proof-card-desc">Payments, GPS, identities and notifications are seeded or simulated. No real funds, card data or customer records are involved.</p></div>
+          <div class="proof-card"><h3 class="proof-card-title">A dated street snapshot</h3><p class="proof-card-desc">The graph is an OpenStreetMap extract (ODbL), not a live map. Distances and ETAs change when the extract is regenerated.</p></div>
+          <div class="proof-card"><h3 class="proof-card-title">Not a hosted product</h3><p class="proof-card-desc">The static lab is hosted; the API and web shell are not deployed by CI. PostgreSQL is optional and single-writer; row-per-aggregate tables and migrations are not built.</p></div>
         </div>
       </section>
     </main>

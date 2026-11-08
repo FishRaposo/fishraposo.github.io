@@ -10,7 +10,9 @@ The live portfolio at fishraposo.github.io. Projects are shown **build in public
 
 This site is the "polished proof" layer of the public surfaces. Era note (2026-08-11): the old canon hierarchy is retired — the working pair is the hub's `IDENTITY.md` (identity keystone) + `career-strategy/` (operating layer); the old `career/` canon is archived at `archive/career/`.
 
-Positioning target (door order updated 2026-11-06 to the hub's D-045; original 2026-10-27 against POSITIONING v9 and CLAIMS v7, mirrored from the profile README): the **promise** "AI systems you can leave on without babysitting", the **arena** "Built for work where wrong answers are expensive", the title **Applied AI Reliability Engineer**, then the two offers in plain words with the AI app audit and production fixes leading and coding agents second, then the proof in measured-reliability order (WCP V5, groundtruth, evalforge, aria-agent, agenttrace, llm-gateway) in canon wording with a scope line. The retired operator statement "I build the systems that work while you don't" must not appear anywhere on the site. Test counts and proof lines come only from the claims register; never round, combine or add an accuracy figure.
+Positioning target (door order updated 2026-11-06 to the hub's D-045; original 2026-10-27 against POSITIONING v9 and CLAIMS v7, mirrored from the profile README): the **promise** "AI systems you can leave on without babysitting", the **arena** "Built for work where wrong answers are expensive", the title **Applied AI Reliability Engineer**, then the two offers in plain words with the AI app audit and production fixes leading and coding agents second, then the proof in measured-reliability order (WCP V5, evalforge, aria-agent, agenttrace, llm-gateway, policydesk), with Entrega Clara as the application proof, in canon wording with a scope line. The retired operator statement "I build the systems that work while you don't" must not appear anywhere on the site. Test counts and proof lines come only from the claims register; never round, combine or add an accuracy figure.
+
+**Status (2026-11-08, seven proof pieces):** WCP re-based to 390 tests (PR #51: zod 4, one Vite/Vitest, Node 24.15); Entrega Clara promoted to the application proof (D-049) with a live static lab, three 1000×750 cards and a `v0.1.0` release. Home shows seven cards; the catalog promotes entrega-clara out of the archive; the profile README adds the proof row and two screens; `llms.txt` carries the six-pin note and the application-proof section. Counts in the entries below are historical.
 
 The old surface spec (`archive/career/Showcase/site-spec.md`) is superseded — rebuilds are specified from `career-strategy/01-job-hunt-and-cv.md`, `career-strategy/06-github-audit.md`, and `IDENTITY.md`. Never copy private strategy details into this public repo.
 
@@ -75,7 +77,7 @@ Both `index.html` and `projects.html` have commented-out template blocks inside 
 
 On `projects.html` require a `data-tags="rag agents"` attribute on each `.project-card` for the filter to work.
 
-Available tags: `pinned`, `gamedev`, `rag`, `agents`, `llm`, `semantic-search`, `automation`, `data-pipeline`, `evaluation`, `api`, `saas`, `regulatory-ai`, `compliance`, `multi-service`, `agentic`, `algorithms`, `frontend`.
+Available tags: `pinned`, `shipped`, `gamedev`, `rag`, `agents`, `llm`, `semantic-search`, `automation`, `data-pipeline`, `evaluation`, `api`, `saas`, `regulatory-ai`, `compliance`, `multi-service`, `agentic`, `algorithms`, `frontend`.
 
 ## Code Style
 
