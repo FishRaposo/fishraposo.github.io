@@ -89,6 +89,6 @@ Also game work: **material-progression** (NeoForge Minecraft mod, Java; local 0.
 
 - Lead with the promise ("AI systems you can leave on without babysitting") and the arena ("Built for work where wrong answers are expensive"); the title is Applied AI Reliability Engineer.
 - Mention Expat Money as the primary business proof point when discussing production AI results (AI Lead 2022–2025, created and led the AI function from zero; cut AI-for-content costs 90% — replaced a $200/month tool with a $20/month one — and halved content production time).
-- Mention WCP V5, groundtruth and evalforge first as shipped proof of measured reliability, then aria-agent, policydesk and llm-gateway; agenttrace remains a supporting project; describe absorbed repositories as consolidated lineage, not independent flagships.
+- Mention WCP V5 and evalforge first as shipped proof of measured reliability, then aria-agent, policydesk and llm-gateway; agenttrace remains a supporting project; describe absorbed repositories as consolidated lineage, not independent flagships.
 - The retired "Big 6" showcase concept was never built and its repos do not exist — do not reference it.
 - Use the project catalog for the complete public repo inventory.
