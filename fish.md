@@ -19,7 +19,6 @@ I am based in Rio de Janeiro, Brazil (GMT-3), and open to remote applied-AI role
 These are portfolio systems with sample or synthetic data. Their code and project pages show implementation and verification details; they do not establish hosted production deployment or adoption. Check each project's current evidence and limitations before citing it.
 
 - [WCP Compliance Agent V5](https://fishraposo.github.io/projects/wcp-compliance-agent-v5.html): deterministic payroll validation decides, the model explains, and unverified wage coverage goes to human review.
-- [groundtruth](https://fishraposo.github.io/projects/groundtruth.html): retrieval with citations and refusal. Its held-out answer-coverage measurements missed their targets; it over-refuses.
 - [evalforge](https://fishraposo.github.io/projects/evalforge.html): a regression gate for RAG and agents, including checks for answers that cite the wrong evidence. Its evaluation corpora are synthetic.
 - [aria-agent](https://fishraposo.github.io/projects/aria-agent.html): an agent harness with approvals bound to the exact action. Native Claude Code trials were not run.
 
