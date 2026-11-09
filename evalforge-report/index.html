@@ -17,16 +17,16 @@
   .counts { display: flex; gap: 24px; margin: 26px 0 10px; }
   .counts div { flex: 1; border-top: 1px solid #21262d; padding-top: 10px; }
   .counts b { display: block; font-size: 30px; color: #f0f6fc; font-variant-numeric: tabular-nums; }
-  .counts span { color: #8b949e; font-size: 11px; text-transform: uppercase; letter-spacing: .07em; }
+  .counts span { color: #8b949e; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; }
   .fail b { color: #fca5a5; }
   pre { background: #11161d; border: 1px solid #21262d; border-radius: 7px; padding: 14px 16px;
         font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; color: #c9d5e0; overflow-x: auto; }
   .note { border-left: 3px solid #c2410c; padding: 2px 0 2px 16px; margin: 18px 0; }
   table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0 6px; }
   td, th { text-align: left; padding: 7px 8px; border-bottom: 1px solid #1b2128; }
-  th { color: #8b949e; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+  th { color: #8b949e; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
   .a { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-  .a a { display: inline-block; border: 1px solid #30363d; border-radius: 6px; padding: 9px 14px;
+  .a a { display: inline-flex; min-height: 44px; align-items: center; border: 1px solid #30363d; border-radius: 6px; padding: 9px 14px;
          color: #d7dde5; text-decoration: none; }
   .a a.primary { background: #1f6feb; border-color: #1f6feb; color: #fff; }
   footer { margin-top: 44px; border-top: 1px solid #21262d; padding-top: 14px; color: #8b949e; font-size: 13px; }
@@ -48,7 +48,7 @@
   </div>
 
   <h2>What produced it</h2>
-  <pre>pip install -e .
+  <pre tabindex="0">pip install -e .
 evalforge eval example_suites/rag_basic.yaml -b mock -f html -o reports</pre>
   <p>The backend is deterministic and offline: no provider key, no network. The suite file hashes to
     <code>c02cc63b…</code> and has not changed since the repository's initial commit, so the same input
